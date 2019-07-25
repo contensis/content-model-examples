@@ -1,0 +1,21 @@
+{
+    "id": "blog",
+    "name": {
+        "en-GB": "Blog"
+    },
+    "description": null,
+    "contentTypes": [
+        "category",
+        "blog",
+        "imageGallery",
+        "person",
+        "videoContent"
+    ],
+    "components": [
+        "codeExample",
+        "links",
+        "metadata",
+        "socialAccounts"
+    ],
+    "dataFormat": "model"
+}

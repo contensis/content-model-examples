@@ -1,0 +1,176 @@
+{
+	"id": "imageGallery",
+	"name": {
+		"en-GB": "Image gallery"
+	},
+	"description": {
+		"en-GB": ""
+	},
+	"entryTitleField": "title",
+	"fields": [
+		{
+			"id": "title",
+			"name": {
+				"en-GB": "Title"
+			},
+			"dataType": "string",
+			"dataFormat": "",
+			"description": {
+				"en-GB": null
+			},
+			"default": null,
+			"validations": {}
+		},
+		{
+			"id": "summary",
+			"name": {
+				"en-GB": "Summary"
+			},
+			"dataType": "string",
+			"dataFormat": "html",
+			"description": {
+				"en-GB": null
+			},
+			"default": null,
+			"validations": {}
+		},
+		{
+			"id": "coverImage",
+			"name": {
+				"en-GB": "Cover image"
+			},
+			"dataType": "object",
+			"dataFormat": "image",
+			"description": {
+				"en-GB": null
+			},
+			"default": null,
+			"validations": {},
+			"editor": {
+				"id": null,
+				"instructions": {},
+				"properties": {
+					"displayCaption": false
+				}
+			}
+		},
+		{
+			"id": "categorys",
+			"name": {
+				"en-GB": "Category/s"
+			},
+			"dataType": "objectArray",
+			"dataFormat": "entry",
+			"description": {
+				"en-GB": null
+			},
+			"default": null,
+			"validations": {
+				"allowedContentTypes": {
+					"contentTypes": [
+						"category"
+					],
+					"message": null
+				}
+			}
+		},
+		{
+			"id": "galleryImage",
+			"name": {
+				"en-GB": "Gallery image"
+			},
+			"dataType": "objectArray",
+			"dataFormat": "component.galleryimage",
+			"description": {
+				"en-GB": null
+			},
+			"default": null,
+			"fields": [
+				{
+					"id": "image",
+					"name": {
+						"en-GB": "Image"
+					},
+					"dataType": "object",
+					"dataFormat": "image",
+					"description": {
+						"en-GB": null
+					},
+					"default": null,
+					"validations": {
+						"altTextRequired": {
+							"message": {
+								"en-GB": ""
+							}
+						}
+					},
+					"editor": {
+						"id": "image",
+						"instructions": {
+							"en-GB": ""
+						},
+						"properties": {
+							"displayCaption": true,
+							"displayAltText": true,
+							"uploadPath": "/image-library",
+							"filterPaths": [
+								"/image-library"
+							]
+						}
+					}
+				},
+				{
+					"id": "title",
+					"name": {
+						"en-GB": "Title"
+					},
+					"dataType": "string",
+					"dataFormat": "",
+					"description": {
+						"en-GB": null
+					},
+					"default": null,
+					"validations": {},
+					"editor": null
+				},
+				{
+					"id": "credit",
+					"name": {
+						"en-GB": "Credit"
+					},
+					"dataType": "string",
+					"dataFormat": "html",
+					"description": {
+						"en-GB": null
+					},
+					"default": null,
+					"validations": {},
+					"editor": null
+				},
+				{
+					"id": "date",
+					"name": {
+						"en-GB": "Date"
+					},
+					"dataType": "dateTime",
+					"dataFormat": "",
+					"description": {
+						"en-GB": null
+					},
+					"default": null,
+					"validations": {},
+					"editor": null
+				}
+			],
+			"validations": {}
+		}
+	],
+	"enabled": true,
+	"defaultLanguage": "en-GB",
+	"supportedLanguages": [
+		"en-GB"
+	],
+	"workflowId": "contensisEntryBasic",
+	"dataFormat": "entry",
+	"previewUrl": ""
+}

@@ -1,0 +1,53 @@
+{
+	"id": "videoContent",
+	"name": {
+		"en-GB": "Video"
+	},
+	"description": {
+		"en-GB": ""
+	},
+	"entryTitleField": "title",
+	"fields": [
+		{
+			"id": "title",
+			"name": {
+				"en-GB": "Title"
+			},
+			"dataType": "string",
+			"dataFormat": "",
+			"description": {
+				"en-GB": null
+			},
+			"default": null,
+			"validations": {}
+		},
+		{
+			"id": "video",
+			"name": {
+				"en-GB": "Video"
+			},
+			"dataType": "object",
+			"dataFormat": "asset",
+			"description": {
+				"en-GB": null
+			},
+			"default": null,
+			"validations": {
+				"allowedContentTypes": {
+					"contentTypes": [
+						"Video"
+					],
+					"message": null
+				}
+			}
+		}
+	],
+	"enabled": true,
+	"defaultLanguage": "en-GB",
+	"supportedLanguages": [
+		"en-GB"
+	],
+	"workflowId": "contensisEntryBasic",
+	"dataFormat": "entry",
+	"previewUrl": ""
+}

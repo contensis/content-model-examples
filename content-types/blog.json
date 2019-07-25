@@ -1,0 +1,472 @@
+{
+	"id": "blog",
+	"name": {
+		"en-GB": "Blog"
+	},
+	"description": {
+		"en-GB": ""
+	},
+	"entryTitleField": "title",
+	"fields": [
+		{
+			"id": "title",
+			"name": {
+				"en-GB": "Title"
+			},
+			"dataType": "string",
+			"dataFormat": "",
+			"description": {
+				"en-GB": null
+			},
+			"default": null,
+			"validations": {}
+		},
+		{
+			"id": "subtitle",
+			"name": {
+				"en-GB": "Subtitle"
+			},
+			"dataType": "string",
+			"dataFormat": "",
+			"description": {
+				"en-GB": null
+			},
+			"default": null,
+			"validations": {}
+		},
+		{
+			"id": "summary",
+			"name": {
+				"en-GB": "Summary"
+			},
+			"dataType": "string",
+			"dataFormat": "",
+			"description": {
+				"en-GB": null
+			},
+			"default": null,
+			"validations": {}
+		},
+		{
+			"id": "lede",
+			"name": {
+				"en-GB": "Lede"
+			},
+			"dataType": "string",
+			"dataFormat": "",
+			"description": {
+				"en-GB": null
+			},
+			"default": null,
+			"validations": {}
+		},
+		{
+			"id": "primaryImage",
+			"name": {
+				"en-GB": "Primary image"
+			},
+			"dataType": "object",
+			"dataFormat": "image",
+			"description": {
+				"en-GB": null
+			},
+			"default": null,
+			"validations": {},
+			"editor": {
+				"id": null,
+				"instructions": {},
+				"properties": {
+					"displayCaption": false,
+					"placeholderText": null,
+					"trueText": null,
+					"falseText": null,
+					"fromPlaceholderText": null,
+					"toPlaceholderText": null,
+					"quotePlaceholderText": null,
+					"sourcePlaceholderText": null
+				}
+			}
+		},
+		{
+			"id": "thumbnailImage",
+			"name": {
+				"en-GB": "Thumbnail Image"
+			},
+			"dataType": "object",
+			"dataFormat": "image",
+			"description": {
+				"en-GB": null
+			},
+			"default": null,
+			"validations": {},
+			"editor": {
+				"id": null,
+				"instructions": {},
+				"properties": {
+					"displayCaption": false
+				}
+			}
+		},
+		{
+			"id": "featured",
+			"name": {
+				"en-GB": "Featured"
+			},
+			"dataType": "boolean",
+			"dataFormat": "",
+			"description": {
+				"en-GB": null
+			},
+			"default": {
+				"en-GB": false
+			},
+			"validations": {}
+		},
+		{
+			"id": "categories",
+			"name": {
+				"en-GB": "Category/s"
+			},
+			"dataType": "objectArray",
+			"dataFormat": "entry",
+			"description": {
+				"en-GB": null
+			},
+			"default": null,
+			"validations": {
+				"allowedContentTypes": {
+					"contentTypes": [
+						"category"
+					],
+					"message": null
+				}
+			}
+		},
+		{
+			"id": "authors",
+			"name": {
+				"en-GB": "Author/s"
+			},
+			"dataType": "object",
+			"dataFormat": "entry",
+			"description": {
+				"en-GB": null
+			},
+			"default": null,
+			"validations": {}
+		},
+		{
+			"id": "articleContent",
+			"name": {
+				"en-GB": "Article content"
+			},
+			"dataType": "objectArray",
+			"dataFormat": "field",
+			"description": {
+				"en-GB": null
+			},
+			"default": null,
+			"validations": {
+				"allowedFieldTypes": {
+					"fields": [
+						{
+							"id": "text",
+							"name": {
+								"en-GB": "Text"
+							},
+							"dataType": "string",
+							"dataFormat": "html",
+							"description": {},
+							"default": null,
+							"validations": {}
+						},
+						{
+							"id": "image",
+							"name": {
+								"en-GB": "Image"
+							},
+							"dataType": "object",
+							"dataFormat": "image",
+							"description": {},
+							"default": null,
+							"validations": {},
+							"editor": {
+								"id": null,
+								"instructions": {},
+								"properties": {
+									"displayCaption": false,
+									"placeholderText": null,
+									"trueText": null,
+									"falseText": null,
+									"fromPlaceholderText": null,
+									"toPlaceholderText": null,
+									"quotePlaceholderText": null,
+									"sourcePlaceholderText": null
+								}
+							}
+						},
+						{
+							"id": "embed",
+							"name": {
+								"en-GB": "Embed"
+							},
+							"dataType": "string",
+							"dataFormat": "",
+							"description": {},
+							"default": null,
+							"validations": {},
+							"editor": {
+								"id": "multiline",
+								"instructions": {
+									"en-GB": ""
+								},
+								"properties": null
+							}
+						},
+						{
+							"id": "quote",
+							"name": {
+								"en-GB": "Quote"
+							},
+							"dataType": "object",
+							"dataFormat": "quote",
+							"description": {},
+							"default": null,
+							"validations": {}
+						}
+					]
+				}
+			}
+		},
+		{
+			"id": "source",
+			"name": {
+				"en-GB": "Source"
+			},
+			"dataType": "object",
+			"dataFormat": "component.source",
+			"description": {
+				"en-GB": null
+			},
+			"default": null,
+			"fields": [
+				{
+					"id": "nameOfSource",
+					"name": {
+						"en-GB": "Name of source"
+					},
+					"dataType": "string",
+					"dataFormat": "",
+					"description": {
+						"en-GB": null
+					},
+					"default": null,
+					"validations": {},
+					"editor": null
+				},
+				{
+					"id": "title",
+					"name": {
+						"en-GB": "Title"
+					},
+					"dataType": "string",
+					"dataFormat": "",
+					"description": {
+						"en-GB": null
+					},
+					"default": null,
+					"validations": {},
+					"editor": null
+				},
+				{
+					"id": "publisher",
+					"name": {
+						"en-GB": "Publisher"
+					},
+					"dataType": "string",
+					"dataFormat": "",
+					"description": {
+						"en-GB": null
+					},
+					"default": null,
+					"validations": {},
+					"editor": null
+				},
+				{
+					"id": "datePublished",
+					"name": {
+						"en-GB": "Date published"
+					},
+					"dataType": "dateTime",
+					"dataFormat": "",
+					"description": {
+						"en-GB": null
+					},
+					"default": null,
+					"validations": {},
+					"editor": null
+				},
+				{
+					"id": "linkToSource",
+					"name": {
+						"en-GB": "Link to source"
+					},
+					"dataType": "string",
+					"dataFormat": "html",
+					"description": {
+						"en-GB": null
+					},
+					"default": null,
+					"validations": {},
+					"editor": null
+				},
+				{
+					"id": "dateRetrieved",
+					"name": {
+						"en-GB": "Date retrieved"
+					},
+					"dataType": "dateTime",
+					"dataFormat": "",
+					"description": {
+						"en-GB": null
+					},
+					"default": null,
+					"validations": {},
+					"editor": null
+				}
+			],
+			"validations": {}
+		},
+		{
+			"id": "relatedLinks",
+			"name": {
+				"en-GB": "Related links"
+			},
+			"dataType": "objectArray",
+			"dataFormat": "component.links",
+			"description": {
+				"en-GB": null
+			},
+			"default": null,
+			"fields": [
+				{
+					"id": "label",
+					"name": {
+						"en-GB": "Label"
+					},
+					"dataType": "string",
+					"dataFormat": "",
+					"description": {
+						"en-GB": null
+					},
+					"default": null,
+					"validations": {},
+					"editor": null
+				},
+				{
+					"id": "url",
+					"name": {
+						"en-GB": "URL"
+					},
+					"dataType": "string",
+					"dataFormat": "",
+					"description": {
+						"en-GB": null
+					},
+					"default": null,
+					"validations": {
+						"regex": {
+							"pattern": "/https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,4}\\b([-a-zA-Z0-9@:%_\\+.~#?&\\/\\/=]*)/g",
+							"message": null
+						}
+					},
+					"editor": null
+				}
+			],
+			"validations": {}
+		},
+		{
+			"id": "relatedNews",
+			"name": {
+				"en-GB": "Related news"
+			},
+			"dataType": "objectArray",
+			"dataFormat": "entry",
+			"description": {
+				"en-GB": null
+			},
+			"default": null,
+			"validations": {}
+		},
+		{
+			"id": "metaInformation",
+			"name": {
+				"en-GB": "Meta information"
+			},
+			"dataType": "object",
+			"dataFormat": "component.metadata",
+			"description": {
+				"en-GB": null
+			},
+			"default": null,
+			"fields": [
+				{
+					"id": "metaTitle",
+					"name": {
+						"en-GB": "Meta title"
+					},
+					"dataType": "string",
+					"dataFormat": "",
+					"description": {
+						"en-GB": null
+					},
+					"default": null,
+					"validations": {},
+					"editor": null
+				},
+				{
+					"id": "metaDescription",
+					"name": {
+						"en-GB": "Meta description"
+					},
+					"dataType": "string",
+					"dataFormat": "",
+					"description": {
+						"en-GB": null
+					},
+					"default": null,
+					"validations": {},
+					"editor": null
+				},
+				{
+					"id": "metaImage",
+					"name": {
+						"en-GB": "Meta image"
+					},
+					"dataType": "object",
+					"dataFormat": "image",
+					"description": {
+						"en-GB": null
+					},
+					"default": null,
+					"validations": {},
+					"editor": {
+						"id": null,
+						"instructions": {},
+						"properties": {
+							"displayCaption": false
+						}
+					}
+				}
+			],
+			"validations": {}
+		}
+	],
+	"enabled": true,
+	"defaultLanguage": "en-GB",
+	"supportedLanguages": [
+		"en-GB"
+	],
+	"workflowId": "contensisEntryBasic",
+	"dataFormat": "entry"
+}
