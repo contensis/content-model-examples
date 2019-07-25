@@ -1,472 +1,758 @@
 {
-	"id": "blog",
-	"name": {
-		"en-GB": "Blog"
-	},
-	"description": {
-		"en-GB": ""
-	},
-	"entryTitleField": "title",
-	"fields": [
-		{
-			"id": "title",
-			"name": {
-				"en-GB": "Title"
-			},
-			"dataType": "string",
-			"dataFormat": "",
-			"description": {
-				"en-GB": null
-			},
-			"default": null,
-			"validations": {}
-		},
-		{
-			"id": "subtitle",
-			"name": {
-				"en-GB": "Subtitle"
-			},
-			"dataType": "string",
-			"dataFormat": "",
-			"description": {
-				"en-GB": null
-			},
-			"default": null,
-			"validations": {}
-		},
-		{
-			"id": "summary",
-			"name": {
-				"en-GB": "Summary"
-			},
-			"dataType": "string",
-			"dataFormat": "",
-			"description": {
-				"en-GB": null
-			},
-			"default": null,
-			"validations": {}
-		},
-		{
-			"id": "lede",
-			"name": {
-				"en-GB": "Lede"
-			},
-			"dataType": "string",
-			"dataFormat": "",
-			"description": {
-				"en-GB": null
-			},
-			"default": null,
-			"validations": {}
-		},
-		{
-			"id": "primaryImage",
-			"name": {
-				"en-GB": "Primary image"
-			},
-			"dataType": "object",
-			"dataFormat": "image",
-			"description": {
-				"en-GB": null
-			},
-			"default": null,
-			"validations": {},
-			"editor": {
-				"id": null,
-				"instructions": {},
-				"properties": {
-					"displayCaption": false,
-					"placeholderText": null,
-					"trueText": null,
-					"falseText": null,
-					"fromPlaceholderText": null,
-					"toPlaceholderText": null,
-					"quotePlaceholderText": null,
-					"sourcePlaceholderText": null
-				}
-			}
-		},
-		{
-			"id": "thumbnailImage",
-			"name": {
-				"en-GB": "Thumbnail Image"
-			},
-			"dataType": "object",
-			"dataFormat": "image",
-			"description": {
-				"en-GB": null
-			},
-			"default": null,
-			"validations": {},
-			"editor": {
-				"id": null,
-				"instructions": {},
-				"properties": {
-					"displayCaption": false
-				}
-			}
-		},
-		{
-			"id": "featured",
-			"name": {
-				"en-GB": "Featured"
-			},
-			"dataType": "boolean",
-			"dataFormat": "",
-			"description": {
-				"en-GB": null
-			},
-			"default": {
-				"en-GB": false
-			},
-			"validations": {}
-		},
-		{
-			"id": "categories",
-			"name": {
-				"en-GB": "Category/s"
-			},
-			"dataType": "objectArray",
-			"dataFormat": "entry",
-			"description": {
-				"en-GB": null
-			},
-			"default": null,
-			"validations": {
-				"allowedContentTypes": {
-					"contentTypes": [
-						"category"
-					],
-					"message": null
-				}
-			}
-		},
-		{
-			"id": "authors",
-			"name": {
-				"en-GB": "Author/s"
-			},
-			"dataType": "object",
-			"dataFormat": "entry",
-			"description": {
-				"en-GB": null
-			},
-			"default": null,
-			"validations": {}
-		},
-		{
-			"id": "articleContent",
-			"name": {
-				"en-GB": "Article content"
-			},
-			"dataType": "objectArray",
-			"dataFormat": "field",
-			"description": {
-				"en-GB": null
-			},
-			"default": null,
-			"validations": {
-				"allowedFieldTypes": {
-					"fields": [
-						{
-							"id": "text",
-							"name": {
-								"en-GB": "Text"
-							},
-							"dataType": "string",
-							"dataFormat": "html",
-							"description": {},
-							"default": null,
-							"validations": {}
-						},
-						{
-							"id": "image",
-							"name": {
-								"en-GB": "Image"
-							},
-							"dataType": "object",
-							"dataFormat": "image",
-							"description": {},
-							"default": null,
-							"validations": {},
-							"editor": {
-								"id": null,
-								"instructions": {},
-								"properties": {
-									"displayCaption": false,
-									"placeholderText": null,
-									"trueText": null,
-									"falseText": null,
-									"fromPlaceholderText": null,
-									"toPlaceholderText": null,
-									"quotePlaceholderText": null,
-									"sourcePlaceholderText": null
-								}
-							}
-						},
-						{
-							"id": "embed",
-							"name": {
-								"en-GB": "Embed"
-							},
-							"dataType": "string",
-							"dataFormat": "",
-							"description": {},
-							"default": null,
-							"validations": {},
-							"editor": {
-								"id": "multiline",
-								"instructions": {
-									"en-GB": ""
-								},
-								"properties": null
-							}
-						},
-						{
-							"id": "quote",
-							"name": {
-								"en-GB": "Quote"
-							},
-							"dataType": "object",
-							"dataFormat": "quote",
-							"description": {},
-							"default": null,
-							"validations": {}
-						}
-					]
-				}
-			}
-		},
-		{
-			"id": "source",
-			"name": {
-				"en-GB": "Source"
-			},
-			"dataType": "object",
-			"dataFormat": "component.source",
-			"description": {
-				"en-GB": null
-			},
-			"default": null,
-			"fields": [
-				{
-					"id": "nameOfSource",
-					"name": {
-						"en-GB": "Name of source"
-					},
-					"dataType": "string",
-					"dataFormat": "",
-					"description": {
-						"en-GB": null
-					},
-					"default": null,
-					"validations": {},
-					"editor": null
-				},
-				{
-					"id": "title",
-					"name": {
-						"en-GB": "Title"
-					},
-					"dataType": "string",
-					"dataFormat": "",
-					"description": {
-						"en-GB": null
-					},
-					"default": null,
-					"validations": {},
-					"editor": null
-				},
-				{
-					"id": "publisher",
-					"name": {
-						"en-GB": "Publisher"
-					},
-					"dataType": "string",
-					"dataFormat": "",
-					"description": {
-						"en-GB": null
-					},
-					"default": null,
-					"validations": {},
-					"editor": null
-				},
-				{
-					"id": "datePublished",
-					"name": {
-						"en-GB": "Date published"
-					},
-					"dataType": "dateTime",
-					"dataFormat": "",
-					"description": {
-						"en-GB": null
-					},
-					"default": null,
-					"validations": {},
-					"editor": null
-				},
-				{
-					"id": "linkToSource",
-					"name": {
-						"en-GB": "Link to source"
-					},
-					"dataType": "string",
-					"dataFormat": "html",
-					"description": {
-						"en-GB": null
-					},
-					"default": null,
-					"validations": {},
-					"editor": null
-				},
-				{
-					"id": "dateRetrieved",
-					"name": {
-						"en-GB": "Date retrieved"
-					},
-					"dataType": "dateTime",
-					"dataFormat": "",
-					"description": {
-						"en-GB": null
-					},
-					"default": null,
-					"validations": {},
-					"editor": null
-				}
-			],
-			"validations": {}
-		},
-		{
-			"id": "relatedLinks",
-			"name": {
-				"en-GB": "Related links"
-			},
-			"dataType": "objectArray",
-			"dataFormat": "component.links",
-			"description": {
-				"en-GB": null
-			},
-			"default": null,
-			"fields": [
-				{
-					"id": "label",
-					"name": {
-						"en-GB": "Label"
-					},
-					"dataType": "string",
-					"dataFormat": "",
-					"description": {
-						"en-GB": null
-					},
-					"default": null,
-					"validations": {},
-					"editor": null
-				},
-				{
-					"id": "url",
-					"name": {
-						"en-GB": "URL"
-					},
-					"dataType": "string",
-					"dataFormat": "",
-					"description": {
-						"en-GB": null
-					},
-					"default": null,
-					"validations": {
-						"regex": {
-							"pattern": "/https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,4}\\b([-a-zA-Z0-9@:%_\\+.~#?&\\/\\/=]*)/g",
-							"message": null
-						}
-					},
-					"editor": null
-				}
-			],
-			"validations": {}
-		},
-		{
-			"id": "relatedNews",
-			"name": {
-				"en-GB": "Related news"
-			},
-			"dataType": "objectArray",
-			"dataFormat": "entry",
-			"description": {
-				"en-GB": null
-			},
-			"default": null,
-			"validations": {}
-		},
-		{
-			"id": "metaInformation",
-			"name": {
-				"en-GB": "Meta information"
-			},
-			"dataType": "object",
-			"dataFormat": "component.metadata",
-			"description": {
-				"en-GB": null
-			},
-			"default": null,
-			"fields": [
-				{
-					"id": "metaTitle",
-					"name": {
-						"en-GB": "Meta title"
-					},
-					"dataType": "string",
-					"dataFormat": "",
-					"description": {
-						"en-GB": null
-					},
-					"default": null,
-					"validations": {},
-					"editor": null
-				},
-				{
-					"id": "metaDescription",
-					"name": {
-						"en-GB": "Meta description"
-					},
-					"dataType": "string",
-					"dataFormat": "",
-					"description": {
-						"en-GB": null
-					},
-					"default": null,
-					"validations": {},
-					"editor": null
-				},
-				{
-					"id": "metaImage",
-					"name": {
-						"en-GB": "Meta image"
-					},
-					"dataType": "object",
-					"dataFormat": "image",
-					"description": {
-						"en-GB": null
-					},
-					"default": null,
-					"validations": {},
-					"editor": {
-						"id": null,
-						"instructions": {},
-						"properties": {
-							"displayCaption": false
-						}
-					}
-				}
-			],
-			"validations": {}
-		}
-	],
-	"enabled": true,
-	"defaultLanguage": "en-GB",
-	"supportedLanguages": [
-		"en-GB"
-	],
-	"workflowId": "contensisEntryBasic",
-	"dataFormat": "entry"
+  "id": "blog",
+  "name": {
+    "en-GB": "Blog"
+  },
+  "description": {
+    "en-GB": "Use this content type to create blog posts. "
+  },
+  "entryTitleField": "title",
+  "fields": [
+    {
+      "id": "title",
+      "name": {
+        "en-GB": "Title"
+      },
+      "dataType": "string",
+      "dataFormat": "",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {
+        "required": {
+          "message": {
+            "en-GB": "You must add a title to your blog. "
+          }
+        }
+      },
+      "editor": {
+        "id": "text",
+        "instructions": {
+          "en-GB": "Add a title for your blog. "
+        },
+        "properties": null
+      }
+    },
+    {
+      "id": "subtitle",
+      "name": {
+        "en-GB": "Subtitle"
+      },
+      "dataType": "string",
+      "dataFormat": "",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": {
+        "id": "text",
+        "instructions": {
+          "en-GB": "Use this field to add a subtitle to your blog. "
+        },
+        "properties": null
+      }
+    },
+    {
+      "id": "summary",
+      "name": {
+        "en-GB": "Summary"
+      },
+      "dataType": "string",
+      "dataFormat": "",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {
+        "maxLength": {
+          "value": 140,
+          "message": {
+            "en-GB": "Your summary must contain 140 characters or fewer. "
+          }
+        }
+      },
+      "editor": {
+        "id": "text",
+        "instructions": {
+          "en-GB": "Add a short summary that will be used to promote your blog.\n"
+        },
+        "properties": null
+      }
+    },
+    {
+      "id": "lede",
+      "name": {
+        "en-GB": "Lede"
+      },
+      "dataType": "string",
+      "dataFormat": "",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": {
+        "id": "multiline",
+        "instructions": {
+          "en-GB": "Use this field to add an introductory paragraph to your blog to entice the visitor to read the whole article. Don't bury the lede – https://style.mla.org/dont-bury-the-lede/ "
+        },
+        "properties": null
+      }
+    },
+    {
+      "id": "primaryImage",
+      "name": {
+        "en-GB": "Primary image"
+      },
+      "dataType": "object",
+      "dataFormat": "image",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": {
+        "id": null,
+        "instructions": {},
+        "properties": {
+          "displayCaption": false,
+          "placeholderText": null,
+          "trueText": null,
+          "falseText": null,
+          "fromPlaceholderText": null,
+          "toPlaceholderText": null,
+          "quotePlaceholderText": null,
+          "sourcePlaceholderText": null,
+          "displayAltText": true,
+          "uploadPath": "/image-library/blogs-images"
+        }
+      }
+    },
+    {
+      "id": "thumbnailImage",
+      "name": {
+        "en-GB": "Thumbnail Image"
+      },
+      "dataType": "object",
+      "dataFormat": "image",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": {
+        "id": null,
+        "instructions": {
+          "en-GB": "Use this field to add an image that will be used to promote your blog. "
+        },
+        "properties": {
+          "displayCaption": false,
+          "placeholderText": null,
+          "trueText": null,
+          "falseText": null,
+          "fromPlaceholderText": null,
+          "toPlaceholderText": null,
+          "quotePlaceholderText": null,
+          "sourcePlaceholderText": null,
+          "displayAltText": false,
+          "uploadPath": "/image-library/blogs-images"
+        }
+      }
+    },
+    {
+      "id": "featured",
+      "name": {
+        "en-GB": "Featured"
+      },
+      "dataType": "boolean",
+      "dataFormat": "",
+      "description": {
+        "en-GB": null
+      },
+      "default": {
+        "en-GB": false
+      },
+      "validations": {},
+      "editor": {
+        "id": null,
+        "instructions": {
+          "en-GB": "Select whether you'd like this article to appear as a featured blog.  "
+        },
+        "properties": null
+      }
+    },
+    {
+      "id": "categories",
+      "name": {
+        "en-GB": "Category/s"
+      },
+      "dataType": "objectArray",
+      "dataFormat": "entry",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {
+        "allowedContentTypes": {
+          "contentTypes": [
+            "category"
+          ],
+          "message": null
+        },
+        "minCount": {
+          "message": {
+            "en-GB": "You must select at least one category."
+          },
+          "value": 1
+        }
+      },
+      "editor": {
+        "id": null,
+        "instructions": {
+          "en-GB": "Add your blog to at least one category. "
+        },
+        "properties": null
+      }
+    },
+    {
+      "id": "authors",
+      "name": {
+        "en-GB": "Author/s"
+      },
+      "dataType": "objectArray",
+      "dataFormat": "entry",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {
+        "allowedContentTypes": {
+          "contentTypes": [
+            "person"
+          ],
+          "message": null
+        },
+        "minCount": {
+          "message": {
+            "en-GB": "You must add at least one author to your blog. "
+          },
+          "value": 1
+        }
+      },
+      "editor": {
+        "id": null,
+        "instructions": {
+          "en-GB": "Select one or more authors for your blog. If the author you want doesn't exist you can add them as a new entry using the People content type. "
+        },
+        "properties": null
+      }
+    },
+    {
+      "id": "articleContent",
+      "name": {
+        "en-GB": "Article content"
+      },
+      "dataType": "objectArray",
+      "dataFormat": "field",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {
+        "required": {
+          "message": {
+            "en-GB": "You need to add some article content before you can publish your blog. "
+          }
+        },
+        "allowedFieldTypes": {
+          "fields": [
+            {
+              "id": "text",
+              "name": {
+                "en-GB": "Text"
+              },
+              "dataType": "string",
+              "dataFormat": "html",
+              "description": {},
+              "default": null,
+              "validations": {},
+              "editor": {
+                "id": null,
+                "instructions": {
+                  "en-GB": "Use this component to add text. "
+                },
+                "properties": null
+              }
+            },
+            {
+              "id": "image",
+              "name": {
+                "en-GB": "Image"
+              },
+              "dataType": "object",
+              "dataFormat": "image",
+              "description": {},
+              "default": null,
+              "validations": {
+                "altTextRequired": {
+                  "message": {
+                    "en-GB": "You need to add alt text to your image. "
+                  }
+                }
+              },
+              "editor": {
+                "id": "image",
+                "instructions": {
+                  "en-GB": "Use this field to add images to the main body of your article. "
+                },
+                "properties": {
+                  "displayCaption": true,
+                  "placeholderText": null,
+                  "trueText": null,
+                  "falseText": null,
+                  "fromPlaceholderText": null,
+                  "toPlaceholderText": null,
+                  "quotePlaceholderText": null,
+                  "sourcePlaceholderText": null,
+                  "displayAltText": true,
+                  "uploadPath": "/image-library/blogs-images"
+                }
+              }
+            },
+            {
+              "id": "embed",
+              "name": {
+                "en-GB": "Embed"
+              },
+              "dataType": "string",
+              "dataFormat": "",
+              "description": {},
+              "default": null,
+              "validations": {
+                "regex": {
+                  "pattern": "/https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,4}\\b([-a-zA-Z0-9@:%_\\+.~#?&\\/\\/=]*)/g",
+                  "message": {
+                    "en-GB": "Your embed must be a valid URL."
+                  }
+                }
+              },
+              "editor": {
+                "id": "multiline",
+                "instructions": {
+                  "en-GB": "Use this field to embed a video in the main body of your article. "
+                },
+                "properties": null
+              }
+            },
+            {
+              "id": "quote",
+              "name": {
+                "en-GB": "Quote"
+              },
+              "dataType": "object",
+              "dataFormat": "quote",
+              "description": {},
+              "default": null,
+              "validations": {},
+              "editor": {
+                "id": null,
+                "instructions": {
+                  "en-GB": "Use this field to add a block quote to the main body of your article. "
+                },
+                "properties": null
+              }
+            }
+          ],
+          "message": null
+        }
+      },
+      "editor": {
+        "id": null,
+        "instructions": {
+          "en-GB": "Create your article by assembling components and adding content to them.  "
+        },
+        "properties": null
+      }
+    },
+    {
+      "id": "source",
+      "name": {
+        "en-GB": "Source"
+      },
+      "dataType": "object",
+      "dataFormat": "component.source",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": {
+        "id": null,
+        "instructions": {
+          "en-GB": "Use this field to add one or more sources you'd like to reference at the end of your article. "
+        },
+        "properties": null
+      },
+      "fields": [
+        {
+          "id": "nameOfSource",
+          "name": {
+            "en-GB": "Name of source"
+          },
+          "dataType": "string",
+          "dataFormat": "",
+          "description": {
+            "en-GB": null
+          },
+          "default": null,
+          "validations": {},
+          "editor": null
+        },
+        {
+          "id": "title",
+          "name": {
+            "en-GB": "Title"
+          },
+          "dataType": "string",
+          "dataFormat": "",
+          "description": {
+            "en-GB": null
+          },
+          "default": null,
+          "validations": {
+            "required": {
+              "message": {
+                "en-GB": "You must add the title of the source? "
+              }
+            }
+          },
+          "editor": {
+            "id": "text",
+            "instructions": {
+              "en-GB": "What's the title of the source?"
+            },
+            "properties": null
+          }
+        },
+        {
+          "id": "publisher",
+          "name": {
+            "en-GB": "Publisher"
+          },
+          "dataType": "string",
+          "dataFormat": "",
+          "description": {
+            "en-GB": null
+          },
+          "default": null,
+          "validations": {
+            "required": {
+              "message": {
+                "en-GB": "You must add the publisher of the source. "
+              }
+            }
+          },
+          "editor": {
+            "id": "text",
+            "instructions": {
+              "en-GB": "Who published the source? This could be a book publisher, a newspaper, or a website. "
+            },
+            "properties": null
+          }
+        },
+        {
+          "id": "datePublished",
+          "name": {
+            "en-GB": "Date published"
+          },
+          "dataType": "dateTime",
+          "dataFormat": "",
+          "description": {
+            "en-GB": null
+          },
+          "default": null,
+          "validations": {
+            "required": {
+              "message": {
+                "en-GB": "You must add the date the source was published. "
+              }
+            }
+          },
+          "editor": {
+            "id": "date",
+            "instructions": {
+              "en-GB": "When was the source published or released? "
+            },
+            "properties": null
+          }
+        },
+        {
+          "id": "linkToSource",
+          "name": {
+            "en-GB": "Link to source"
+          },
+          "dataType": "string",
+          "dataFormat": "html",
+          "description": {
+            "en-GB": null
+          },
+          "default": null,
+          "validations": {},
+          "editor": {
+            "id": null,
+            "instructions": {
+              "en-GB": "If the source is an online resource, like a web page, add a link here. If it's a physical resource, like a book or film, leave this field empty."
+            },
+            "properties": null
+          }
+        },
+        {
+          "id": "dateRetrieved",
+          "name": {
+            "en-GB": "Date retrieved"
+          },
+          "dataType": "dateTime",
+          "dataFormat": "",
+          "description": {
+            "en-GB": null
+          },
+          "default": null,
+          "validations": {
+            "required": {
+              "message": {
+                "en-GB": "You must add the date you retrieved the source. "
+              }
+            }
+          },
+          "editor": {
+            "id": "date",
+            "instructions": {
+              "en-GB": "When did you last check the source? "
+            },
+            "properties": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "relatedLinks",
+      "name": {
+        "en-GB": "Related links"
+      },
+      "dataType": "objectArray",
+      "dataFormat": "component.links",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": {
+        "id": null,
+        "instructions": {
+          "en-GB": "Use this field to add links to related content hosted outside of this CMS. "
+        },
+        "properties": null
+      },
+      "fields": [
+        {
+          "id": "label",
+          "name": {
+            "en-GB": "Label"
+          },
+          "dataType": "string",
+          "dataFormat": "",
+          "description": {
+            "en-GB": null
+          },
+          "default": null,
+          "validations": {},
+          "editor": null
+        },
+        {
+          "id": "url",
+          "name": {
+            "en-GB": "URL"
+          },
+          "dataType": "string",
+          "dataFormat": "",
+          "description": {
+            "en-GB": null
+          },
+          "default": null,
+          "validations": {
+            "regex": {
+              "pattern": "/https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,4}\\b([-a-zA-Z0-9@:%_\\+.~#?&\\/\\/=]*)/g",
+              "message": null
+            }
+          },
+          "editor": null
+        }
+      ]
+    },
+    {
+      "id": "relatedEntries",
+      "name": {
+        "en-GB": "Related entries"
+      },
+      "dataType": "objectArray",
+      "dataFormat": "entry",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {
+        "allowedContentTypes": {
+          "contentTypes": [
+            "blog",
+            "news"
+          ],
+          "message": null
+        }
+      },
+      "editor": {
+        "id": null,
+        "instructions": {
+          "en-GB": "Use this field to add links to related entries stored in this CMS. "
+        },
+        "properties": null
+      }
+    },
+    {
+      "id": "metaInfo",
+      "name": {
+        "en-GB": "Meta information"
+      },
+      "dataType": "object",
+      "dataFormat": "component.metainfo",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": {
+        "id": null,
+        "instructions": {
+          "en-GB": "Add metadata here to help your blog get found on social media and in search engines. "
+        },
+        "properties": null
+      },
+      "fields": [
+        {
+          "id": "metaTitle",
+          "name": {
+            "en-GB": "Meta title"
+          },
+          "dataType": "string",
+          "dataFormat": "",
+          "description": {
+            "en-GB": null
+          },
+          "default": null,
+          "validations": {
+            "required": {
+              "message": {
+                "en-GB": "You must enter a meta title."
+              }
+            },
+            "maxLength": {
+              "value": 60,
+              "message": {
+                "en-GB": "Your meta title can't contain more than 60 characters."
+              }
+            }
+          },
+          "editor": {
+            "id": "text",
+            "instructions": {
+              "en-GB": "This is the short title that will appear on search engine results pages and social media."
+            },
+            "properties": null
+          }
+        },
+        {
+          "id": "metaDescription",
+          "name": {
+            "en-GB": "Meta description"
+          },
+          "dataType": "string",
+          "dataFormat": "",
+          "description": {
+            "en-GB": null
+          },
+          "default": null,
+          "validations": {
+            "required": {
+              "message": {
+                "en-GB": "You must enter a meta description. "
+              }
+            },
+            "maxLength": {
+              "value": 140,
+              "message": {
+                "en-GB": "Your meta description can't contain more than 140 characters."
+              }
+            }
+          },
+          "editor": {
+            "id": "text",
+            "instructions": {
+              "en-GB": "This is the short description that will appear on search engine results pages and social media."
+            },
+            "properties": null
+          }
+        },
+        {
+          "id": "metaImage",
+          "name": {
+            "en-GB": "Meta image"
+          },
+          "dataType": "object",
+          "dataFormat": "image",
+          "description": {
+            "en-GB": null
+          },
+          "default": null,
+          "validations": {
+            "altTextRequired": {
+              "message": {
+                "en-GB": "You must add alt text to your image. "
+              }
+            }
+          },
+          "editor": {
+            "id": "image",
+            "instructions": {
+              "en-GB": "This is the image that will appear on search engine results pages and social media."
+            },
+            "properties": {
+              "displayCaption": false,
+              "placeholderText": null,
+              "trueText": null,
+              "falseText": null,
+              "fromPlaceholderText": null,
+              "toPlaceholderText": null,
+              "quotePlaceholderText": null,
+              "sourcePlaceholderText": null,
+              "displayAltText": true,
+              "uploadPath": "/image-library",
+              "filterPaths": [
+                "/image-library"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "enabled": true,
+  "defaultLanguage": "en-GB",
+  "supportedLanguages": [
+    "en-GB"
+  ],
+  "workflowId": "contensisEntryBasic",
+  "dataFormat": "entry",
+  "previewUrl": "",
+  "groups": []
 }

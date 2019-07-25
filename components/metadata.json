@@ -1,59 +1,66 @@
 {
-	"id": "metadata",
-	"name": {
-		"en-GB": "Meta information"
-	},
-	"description": {
-		"en-GB": ""
-	},
-	"fields": [
-		{
-			"id": "metaTitle",
-			"name": {
-				"en-GB": "Meta title"
-			},
-			"dataType": "string",
-			"dataFormat": "",
-			"description": {
-				"en-GB": null
-			},
-			"default": null,
-			"validations": {}
-		},
-		{
-			"id": "metaDescription",
-			"name": {
-				"en-GB": "Meta description"
-			},
-			"dataType": "string",
-			"dataFormat": "",
-			"description": {
-				"en-GB": null
-			},
-			"default": null,
-			"validations": {}
-		},
-		{
-			"id": "metaImage",
-			"name": {
-				"en-GB": "Meta image"
-			},
-			"dataType": "object",
-			"dataFormat": "image",
-			"description": {
-				"en-GB": null
-			},
-			"default": null,
-			"validations": {},
-			"editor": {
-				"id": null,
-				"instructions": {},
-				"properties": {
-					"displayCaption": false
-				}
-			}
-		}
-	],
-	"workflowId": "contensisEntryBasic",
-	"dataFormat": "component"
+  "id": "metadata",
+  "name": {
+    "en-GB": "Meta information (Old)"
+  },
+  "description": {},
+  "fields": [
+    {
+      "id": "metaTitle",
+      "name": {
+        "en-GB": "Meta title"
+      },
+      "dataType": "string",
+      "dataFormat": "",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": null
+    },
+    {
+      "id": "metaDescription",
+      "name": {
+        "en-GB": "Meta description"
+      },
+      "dataType": "string",
+      "dataFormat": "",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": null
+    },
+    {
+      "id": "metaImage",
+      "name": {
+        "en-GB": "Meta image"
+      },
+      "dataType": "object",
+      "dataFormat": "image",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": {
+        "id": null,
+        "instructions": {},
+        "properties": {
+          "displayCaption": false,
+          "placeholderText": null,
+          "trueText": null,
+          "falseText": null,
+          "fromPlaceholderText": null,
+          "toPlaceholderText": null,
+          "quotePlaceholderText": null,
+          "sourcePlaceholderText": null
+        }
+      }
+    }
+  ],
+  "dataFormat": "component",
+  "previewUrl": ""
 }

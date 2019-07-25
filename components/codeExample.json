@@ -1,43 +1,45 @@
 {
-	"id": "codeExample",
-	"name": {
-		"en-GB": "Code example"
-	},
-	"description": {
-		"en-GB": ""
-	},
-	"fields": [
-		{
-			"id": "markup",
-			"name": {
-				"en-GB": "Markup"
-			},
-			"dataType": "string",
-			"dataFormat": "html",
-			"description": {
-				"en-GB": null
-			},
-			"default": null,
-			"validations": {}
-		},
-		{
-			"id": "language",
-			"name": {
-				"en-GB": "Language"
-			},
-			"dataType": "stringArray",
-			"dataFormat": "",
-			"description": {
-				"en-GB": null
-			},
-			"default": null,
-			"validations": {
-				"allowedValues": {
-					"values": [],
-					"message": null
-				}
-			}
-		}
-	],
-	"dataFormat": "component"
+  "id": "codeExample",
+  "name": {
+    "en-GB": "Code example"
+  },
+  "description": {
+    "en-GB": ""
+  },
+  "fields": [
+    {
+      "id": "markup",
+      "name": {
+        "en-GB": "Markup"
+      },
+      "dataType": "string",
+      "dataFormat": "html",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": null
+    },
+    {
+      "id": "language",
+      "name": {
+        "en-GB": "Language"
+      },
+      "dataType": "stringArray",
+      "dataFormat": "",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {
+        "allowedValues": {
+          "values": [],
+          "message": null
+        }
+      },
+      "editor": null
+    }
+  ],
+  "dataFormat": "component"
 }

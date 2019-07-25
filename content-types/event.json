@@ -1,9 +1,11 @@
 {
-  "id": "news",
+  "id": "event",
   "name": {
-    "en-GB": "News"
+    "en-GB": "Event"
   },
-  "description": {},
+  "description": {
+    "en-GB": "Use this content type to create events. "
+  },
   "entryTitleField": "title",
   "fields": [
     {
@@ -21,40 +23,12 @@
       "editor": null
     },
     {
-      "id": "subtitle",
-      "name": {
-        "en-GB": "Subtitle"
-      },
-      "dataType": "string",
-      "dataFormat": "",
-      "description": {
-        "en-GB": null
-      },
-      "default": null,
-      "validations": {},
-      "editor": null
-    },
-    {
       "id": "summary",
       "name": {
         "en-GB": "Summary"
       },
       "dataType": "string",
-      "dataFormat": "",
-      "description": {
-        "en-GB": null
-      },
-      "default": null,
-      "validations": {},
-      "editor": null
-    },
-    {
-      "id": "lede",
-      "name": {
-        "en-GB": "Lede"
-      },
-      "dataType": "string",
-      "dataFormat": "",
+      "dataFormat": "html",
       "description": {
         "en-GB": null
       },
@@ -65,7 +39,7 @@
     {
       "id": "primaryImage",
       "name": {
-        "en-GB": "Primary image"
+        "en-GB": "Primary Image"
       },
       "dataType": "object",
       "dataFormat": "image",
@@ -87,14 +61,14 @@
           "quotePlaceholderText": null,
           "sourcePlaceholderText": null,
           "displayAltText": false,
-          "uploadPath": "/image-library/news-images"
+          "uploadPath": "/image-library/event-images"
         }
       }
     },
     {
       "id": "thumbnailImage",
       "name": {
-        "en-GB": "Thumbnail image"
+        "en-GB": "Thumbnail Image"
       },
       "dataType": "object",
       "dataFormat": "image",
@@ -108,40 +82,38 @@
         "instructions": {},
         "properties": {
           "displayCaption": false,
-          "displayAltText": false,
-          "uploadPath": "/image-library/news-images",
           "placeholderText": null,
           "trueText": null,
           "falseText": null,
           "fromPlaceholderText": null,
           "toPlaceholderText": null,
           "quotePlaceholderText": null,
-          "sourcePlaceholderText": null
+          "sourcePlaceholderText": null,
+          "displayAltText": false,
+          "uploadPath": "/image-library/event-images"
         }
       }
     },
     {
-      "id": "featured",
+      "id": "datetime",
       "name": {
-        "en-GB": "Featured"
+        "en-GB": "Date/time"
       },
-      "dataType": "boolean",
-      "dataFormat": "",
+      "dataType": "objectArray",
+      "dataFormat": "daterange",
       "description": {
         "en-GB": null
       },
-      "default": {
-        "en-GB": false
-      },
+      "default": null,
       "validations": {},
       "editor": null
     },
     {
-      "id": "categories",
+      "id": "venue",
       "name": {
-        "en-GB": "Category/s"
+        "en-GB": "Venue"
       },
-      "dataType": "objectArray",
+      "dataType": "object",
       "dataFormat": "entry",
       "description": {
         "en-GB": null
@@ -150,7 +122,7 @@
       "validations": {
         "allowedContentTypes": {
           "contentTypes": [
-            "category"
+            "location"
           ],
           "message": null
         }
@@ -158,11 +130,113 @@
       "editor": null
     },
     {
-      "id": "authors",
+      "id": "admission",
       "name": {
-        "en-GB": "Author/s"
+        "en-GB": "Admission"
       },
       "dataType": "objectArray",
+      "dataFormat": "component.eventadmission",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": null,
+      "fields": [
+        {
+          "id": "list",
+          "name": {
+            "en-GB": "List"
+          },
+          "dataType": "stringArray",
+          "dataFormat": null,
+          "description": {
+            "en-GB": null
+          },
+          "default": null,
+          "validations": {
+            "allowedValues": {
+              "values": [
+                {
+                  "en-GB": "Adult"
+                },
+                {
+                  "en-GB": "Child"
+                },
+                {
+                  "en-GB": "Concession"
+                },
+                {
+                  "en-GB": "Family (2 Adults and 2 Children"
+                },
+                {
+                  "en-GB": "Free"
+                }
+              ],
+              "message": null
+            }
+          },
+          "editor": {
+            "id": "list",
+            "instructions": {},
+            "properties": null
+          }
+        },
+        {
+          "id": "price",
+          "name": {
+            "en-GB": "Price"
+          },
+          "dataType": "decimal",
+          "dataFormat": "",
+          "description": {
+            "en-GB": null
+          },
+          "default": null,
+          "validations": {},
+          "editor": null
+        }
+      ]
+    },
+    {
+      "id": "admissionAdditionalInfo",
+      "name": {
+        "en-GB": "Admission additional info"
+      },
+      "dataType": "string",
+      "dataFormat": "html",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": null
+    },
+    {
+      "id": "bookingLink",
+      "name": {
+        "en-GB": "Booking link"
+      },
+      "dataType": "string",
+      "dataFormat": "",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {
+        "regex": {
+          "pattern": "/https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,4}\\b([-a-zA-Z0-9@:%_\\+.~#?&\\/\\/=]*)/g",
+          "message": null
+        }
+      },
+      "editor": null
+    },
+    {
+      "id": "organiser",
+      "name": {
+        "en-GB": "Organiser"
+      },
+      "dataType": "object",
       "dataFormat": "entry",
       "description": {
         "en-GB": null
@@ -179,9 +253,9 @@
       "editor": null
     },
     {
-      "id": "articleContent",
+      "id": "composer",
       "name": {
-        "en-GB": "Article content"
+        "en-GB": "Composer"
       },
       "dataType": "objectArray",
       "dataFormat": "field",
@@ -205,6 +279,18 @@
               "editor": null
             },
             {
+              "id": "lede",
+              "name": {
+                "en-GB": "Lede"
+              },
+              "dataType": "string",
+              "dataFormat": "html",
+              "description": {},
+              "default": null,
+              "validations": {},
+              "editor": null
+            },
+            {
               "id": "image",
               "name": {
                 "en-GB": "Image"
@@ -213,23 +299,79 @@
               "dataFormat": "image",
               "description": {},
               "default": null,
-              "validations": {},
+              "validations": {
+                "altTextRequired": {
+                  "message": {
+                    "en-GB": ""
+                  }
+                }
+              },
               "editor": {
                 "id": "image",
                 "instructions": {},
                 "properties": {
-                  "displayCaption": false,
+                  "displayCaption": true,
+                  "displayAltText": true,
+                  "uploadPath": "/image-library",
                   "placeholderText": null,
                   "trueText": null,
                   "falseText": null,
                   "fromPlaceholderText": null,
                   "toPlaceholderText": null,
                   "quotePlaceholderText": null,
-                  "sourcePlaceholderText": null,
-                  "displayAltText": false,
-                  "uploadPath": "/image-library/news-images"
+                  "sourcePlaceholderText": null
                 }
               }
+            },
+            {
+              "id": "quote",
+              "name": {
+                "en-GB": "Quote"
+              },
+              "dataType": "object",
+              "dataFormat": "quote",
+              "description": {},
+              "default": null,
+              "validations": {},
+              "editor": null
+            },
+            {
+              "id": "video",
+              "name": {
+                "en-GB": "Video"
+              },
+              "dataType": "object",
+              "dataFormat": "entry",
+              "description": {},
+              "default": null,
+              "validations": {
+                "allowedContentTypes": {
+                  "contentTypes": [
+                    "videoContent"
+                  ],
+                  "message": null
+                }
+              },
+              "editor": null
+            },
+            {
+              "id": "imageGallery",
+              "name": {
+                "en-GB": "Image gallery"
+              },
+              "dataType": "object",
+              "dataFormat": "entry",
+              "description": {},
+              "default": null,
+              "validations": {
+                "allowedContentTypes": {
+                  "contentTypes": [
+                    "imageGallery"
+                  ],
+                  "message": null
+                }
+              },
+              "editor": null
             },
             {
               "id": "embed",
@@ -258,56 +400,6 @@
                   "editor": null
                 }
               ]
-            },
-            {
-              "id": "quote",
-              "name": {
-                "en-GB": "Quote"
-              },
-              "dataType": "object",
-              "dataFormat": "quote",
-              "description": {},
-              "default": null,
-              "validations": {},
-              "editor": null
-            },
-            {
-              "id": "imageGallery",
-              "name": {
-                "en-GB": "Image gallery"
-              },
-              "dataType": "object",
-              "dataFormat": "entry",
-              "description": {},
-              "default": null,
-              "validations": {
-                "allowedContentTypes": {
-                  "contentTypes": [
-                    "imageGallery"
-                  ],
-                  "message": null
-                }
-              },
-              "editor": null
-            },
-            {
-              "id": "video",
-              "name": {
-                "en-GB": "Video"
-              },
-              "dataType": "object",
-              "dataFormat": "entry",
-              "description": {},
-              "default": null,
-              "validations": {
-                "allowedContentTypes": {
-                  "contentTypes": [
-                    "videoContent"
-                  ],
-                  "message": null
-                }
-              },
-              "editor": null
             }
           ],
           "message": null
@@ -316,212 +408,51 @@
       "editor": null
     },
     {
-      "id": "source",
+      "id": "category",
       "name": {
-        "en-GB": "Source"
+        "en-GB": "Category"
       },
       "dataType": "object",
-      "dataFormat": "component.source",
+      "dataFormat": "entry",
       "description": {
         "en-GB": null
       },
       "default": null,
-      "validations": {},
-      "editor": null,
-      "fields": [
-        {
-          "id": "nameOfSource",
-          "name": {
-            "en-GB": "Name of source"
-          },
-          "dataType": "string",
-          "dataFormat": "",
-          "description": {
-            "en-GB": null
-          },
-          "default": null,
-          "validations": {},
-          "editor": null
-        },
-        {
-          "id": "title",
-          "name": {
-            "en-GB": "Title"
-          },
-          "dataType": "string",
-          "dataFormat": "",
-          "description": {
-            "en-GB": null
-          },
-          "default": null,
-          "validations": {
-            "required": {
-              "message": {
-                "en-GB": "You must add the title of the source? "
-              }
-            }
-          },
-          "editor": {
-            "id": "text",
-            "instructions": {
-              "en-GB": "What's the title of the source?"
-            },
-            "properties": null
-          }
-        },
-        {
-          "id": "publisher",
-          "name": {
-            "en-GB": "Publisher"
-          },
-          "dataType": "string",
-          "dataFormat": "",
-          "description": {
-            "en-GB": null
-          },
-          "default": null,
-          "validations": {
-            "required": {
-              "message": {
-                "en-GB": "You must add the publisher of the source. "
-              }
-            }
-          },
-          "editor": {
-            "id": "text",
-            "instructions": {
-              "en-GB": "Who published the source? This could be a book publisher, a newspaper, or a website. "
-            },
-            "properties": null
-          }
-        },
-        {
-          "id": "datePublished",
-          "name": {
-            "en-GB": "Date published"
-          },
-          "dataType": "dateTime",
-          "dataFormat": "",
-          "description": {
-            "en-GB": null
-          },
-          "default": null,
-          "validations": {
-            "required": {
-              "message": {
-                "en-GB": "You must add the date the source was published. "
-              }
-            }
-          },
-          "editor": {
-            "id": "date",
-            "instructions": {
-              "en-GB": "When was the source published or released? "
-            },
-            "properties": null
-          }
-        },
-        {
-          "id": "linkToSource",
-          "name": {
-            "en-GB": "Link to source"
-          },
-          "dataType": "string",
-          "dataFormat": "html",
-          "description": {
-            "en-GB": null
-          },
-          "default": null,
-          "validations": {},
-          "editor": {
-            "id": null,
-            "instructions": {
-              "en-GB": "If the source is an online resource, like a web page, add a link here. If it's a physical resource, like a book or film, leave this field empty."
-            },
-            "properties": null
-          }
-        },
-        {
-          "id": "dateRetrieved",
-          "name": {
-            "en-GB": "Date retrieved"
-          },
-          "dataType": "dateTime",
-          "dataFormat": "",
-          "description": {
-            "en-GB": null
-          },
-          "default": null,
-          "validations": {
-            "required": {
-              "message": {
-                "en-GB": "You must add the date you retrieved the source. "
-              }
-            }
-          },
-          "editor": {
-            "id": "date",
-            "instructions": {
-              "en-GB": "When did you last check the source? "
-            },
-            "properties": null
-          }
+      "validations": {
+        "allowedContentTypes": {
+          "contentTypes": [
+            "category"
+          ],
+          "message": null
         }
-      ]
+      },
+      "editor": null
     },
     {
-      "id": "relatedLinks",
+      "id": "sponsor",
       "name": {
-        "en-GB": "Related links"
+        "en-GB": "Sponsor"
       },
-      "dataType": "objectArray",
-      "dataFormat": "component.links",
+      "dataType": "object",
+      "dataFormat": "entry",
       "description": {
         "en-GB": null
       },
       "default": null,
-      "validations": {},
-      "editor": null,
-      "fields": [
-        {
-          "id": "label",
-          "name": {
-            "en-GB": "Label"
-          },
-          "dataType": "string",
-          "dataFormat": "",
-          "description": {
-            "en-GB": null
-          },
-          "default": null,
-          "validations": {},
-          "editor": null
-        },
-        {
-          "id": "url",
-          "name": {
-            "en-GB": "URL"
-          },
-          "dataType": "string",
-          "dataFormat": "",
-          "description": {
-            "en-GB": null
-          },
-          "default": null,
-          "validations": {
-            "regex": {
-              "pattern": "/https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,4}\\b([-a-zA-Z0-9@:%_\\+.~#?&\\/\\/=]*)/g",
-              "message": null
-            }
-          },
-          "editor": null
+      "validations": {
+        "allowedContentTypes": {
+          "contentTypes": [
+            "organisation"
+          ],
+          "message": null
         }
-      ]
+      },
+      "editor": null
     },
     {
-      "id": "relatedNews",
+      "id": "speaker",
       "name": {
-        "en-GB": "Related news"
+        "en-GB": "Speaker"
       },
       "dataType": "objectArray",
       "dataFormat": "entry",
@@ -529,7 +460,14 @@
         "en-GB": null
       },
       "default": null,
-      "validations": {},
+      "validations": {
+        "allowedContentTypes": {
+          "contentTypes": [
+            "person"
+          ],
+          "message": null
+        }
+      },
       "editor": null
     },
     {
@@ -651,6 +589,29 @@
           }
         }
       ]
+    },
+    {
+      "id": "relatedEntries",
+      "name": {
+        "en-GB": "Related entries"
+      },
+      "dataType": "object",
+      "dataFormat": "entry",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {
+        "allowedContentTypes": {
+          "contentTypes": [
+            "blog",
+            "news",
+            "event"
+          ],
+          "message": null
+        }
+      },
+      "editor": null
     }
   ],
   "enabled": true,
@@ -660,5 +621,6 @@
   ],
   "workflowId": "contensisEntryBasic",
   "dataFormat": "entry",
+  "previewUrl": "",
   "groups": []
 }

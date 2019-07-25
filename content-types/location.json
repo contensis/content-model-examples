@@ -1,0 +1,273 @@
+{
+  "id": "location",
+  "name": {
+    "en-GB": "Location"
+  },
+  "description": {},
+  "entryTitleField": "name",
+  "entryDescriptionField": "description",
+  "fields": [
+    {
+      "id": "name",
+      "name": {
+        "en-GB": "Name"
+      },
+      "dataType": "string",
+      "dataFormat": "",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {
+        "required": {
+          "message": {
+            "en-GB": "You must enter a name for this location. "
+          }
+        }
+      },
+      "editor": null
+    },
+    {
+      "id": "description",
+      "name": {
+        "en-GB": "Short description"
+      },
+      "dataType": "string",
+      "dataFormat": "",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": null
+    },
+    {
+      "id": "alsoKnownAs",
+      "name": {
+        "en-GB": "Also known as"
+      },
+      "dataType": "string",
+      "dataFormat": "",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": null
+    },
+    {
+      "id": "geographicalLocation",
+      "name": {
+        "en-GB": "Geographical location"
+      },
+      "dataType": "object",
+      "dataFormat": "location",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {
+        "required": {
+          "message": {
+            "en-GB": "You must add a geographical location."
+          }
+        }
+      },
+      "editor": null
+    },
+    {
+      "id": "address",
+      "name": {
+        "en-GB": "Address"
+      },
+      "dataType": "object",
+      "dataFormat": "component.address",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": null,
+      "fields": [
+        {
+          "id": "buildingNumberOrName",
+          "name": {
+            "en-GB": "Building number or name"
+          },
+          "dataType": "string",
+          "dataFormat": "",
+          "description": {
+            "en-GB": null
+          },
+          "default": null,
+          "validations": {},
+          "editor": null
+        },
+        {
+          "id": "streetName",
+          "name": {
+            "en-GB": "Street name"
+          },
+          "dataType": "string",
+          "dataFormat": "",
+          "description": {
+            "en-GB": null
+          },
+          "default": null,
+          "validations": {},
+          "editor": null
+        },
+        {
+          "id": "towncity",
+          "name": {
+            "en-GB": "Town/city"
+          },
+          "dataType": "string",
+          "dataFormat": "",
+          "description": {
+            "en-GB": null
+          },
+          "default": null,
+          "validations": {},
+          "editor": null
+        },
+        {
+          "id": "postCode",
+          "name": {
+            "en-GB": "Post code"
+          },
+          "dataType": "string",
+          "dataFormat": "",
+          "description": {
+            "en-GB": null
+          },
+          "default": null,
+          "validations": {},
+          "editor": null
+        },
+        {
+          "id": "country",
+          "name": {
+            "en-GB": "Country"
+          },
+          "dataType": "string",
+          "dataFormat": "",
+          "description": {
+            "en-GB": null
+          },
+          "default": null,
+          "validations": {},
+          "editor": null
+        }
+      ]
+    },
+    {
+      "id": "imageGallery",
+      "name": {
+        "en-GB": "Image gallery"
+      },
+      "dataType": "object",
+      "dataFormat": "entry",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {
+        "allowedContentTypes": {
+          "contentTypes": [
+            "imageGallery"
+          ],
+          "message": null
+        }
+      },
+      "editor": null
+    },
+    {
+      "id": "essentialFacilities",
+      "name": {
+        "en-GB": "Essential facilities"
+      },
+      "dataType": "stringArray",
+      "dataFormat": "",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {
+        "allowedValues": {
+          "values": [
+            {
+              "en-GB": "Toilets"
+            },
+            {
+              "en-GB": "Baby change facilities"
+            },
+            {
+              "en-GB": "Wheelchair access"
+            },
+            {
+              "en-GB": "WiFi"
+            },
+            {
+              "en-GB": "Hearing loop"
+            }
+          ],
+          "message": {
+            "en-GB": ""
+          }
+        }
+      },
+      "editor": {
+        "id": "searchableDropdown",
+        "instructions": {},
+        "properties": {
+          "placeholderText": {
+            "en-GB": "Select the facilities available at this location:"
+          },
+          "trueText": null,
+          "falseText": null,
+          "fromPlaceholderText": null,
+          "toPlaceholderText": null,
+          "quotePlaceholderText": null,
+          "sourcePlaceholderText": null
+        }
+      }
+    },
+    {
+      "id": "gettingToTheVenue",
+      "name": {
+        "en-GB": "Getting to the venue"
+      },
+      "dataType": "string",
+      "dataFormat": "html",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": null
+    },
+    {
+      "id": "usefulInformation",
+      "name": {
+        "en-GB": "Useful information"
+      },
+      "dataType": "string",
+      "dataFormat": "html",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": null
+    }
+  ],
+  "enabled": true,
+  "defaultLanguage": "en-GB",
+  "supportedLanguages": [
+    "en-GB"
+  ],
+  "workflowId": "contensisEntryBasic",
+  "dataFormat": "entry",
+  "groups": []
+}

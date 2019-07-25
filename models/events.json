@@ -10,6 +10,7 @@
         "categories"
     ],
     "components": [
+        "embed",
         "location"
     ],
     "dataFormat": "model"

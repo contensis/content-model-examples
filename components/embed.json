@@ -1,0 +1,24 @@
+{
+  "id": "embed",
+  "name": {
+    "en-GB": "Embed"
+  },
+  "description": {},
+  "fields": [
+    {
+      "id": "embedURL",
+      "name": {
+        "en-GB": "Embed URL"
+      },
+      "dataType": "string",
+      "dataFormat": "",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": null
+    }
+  ],
+  "dataFormat": "component"
+}

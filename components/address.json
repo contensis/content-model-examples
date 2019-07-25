@@ -1,0 +1,80 @@
+{
+  "id": "address",
+  "name": {
+    "en-GB": "Address"
+  },
+  "description": {},
+  "fields": [
+    {
+      "id": "buildingNumberOrName",
+      "name": {
+        "en-GB": "Building number or name"
+      },
+      "dataType": "string",
+      "dataFormat": "",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": null
+    },
+    {
+      "id": "streetName",
+      "name": {
+        "en-GB": "Street name"
+      },
+      "dataType": "string",
+      "dataFormat": "",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": null
+    },
+    {
+      "id": "towncity",
+      "name": {
+        "en-GB": "Town/city"
+      },
+      "dataType": "string",
+      "dataFormat": "",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": null
+    },
+    {
+      "id": "postCode",
+      "name": {
+        "en-GB": "Post code"
+      },
+      "dataType": "string",
+      "dataFormat": "",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": null
+    },
+    {
+      "id": "country",
+      "name": {
+        "en-GB": "Country"
+      },
+      "dataType": "string",
+      "dataFormat": "",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": null
+    }
+  ],
+  "dataFormat": "component"
+}

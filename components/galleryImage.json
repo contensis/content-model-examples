@@ -1,0 +1,88 @@
+{
+  "id": "galleryImage",
+  "name": {
+    "en-GB": "Gallery image"
+  },
+  "description": {
+    "en-GB": ""
+  },
+  "fields": [
+    {
+      "id": "image",
+      "name": {
+        "en-GB": "Image"
+      },
+      "dataType": "object",
+      "dataFormat": "image",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {
+        "altTextRequired": {
+          "message": {
+            "en-GB": ""
+          }
+        }
+      },
+      "editor": {
+        "id": "image",
+        "instructions": {
+          "en-GB": ""
+        },
+        "properties": {
+          "displayCaption": true,
+          "displayAltText": true,
+          "uploadPath": "/image-library",
+          "filterPaths": [
+            "/image-library"
+          ]
+        }
+      }
+    },
+    {
+      "id": "title",
+      "name": {
+        "en-GB": "Title"
+      },
+      "dataType": "string",
+      "dataFormat": "",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": null
+    },
+    {
+      "id": "credit",
+      "name": {
+        "en-GB": "Credit"
+      },
+      "dataType": "string",
+      "dataFormat": "html",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": null
+    },
+    {
+      "id": "date",
+      "name": {
+        "en-GB": "Date"
+      },
+      "dataType": "dateTime",
+      "dataFormat": "",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": null
+    }
+  ],
+  "dataFormat": "component",
+  "previewUrl": ""
+}

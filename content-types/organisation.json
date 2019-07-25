@@ -1,0 +1,269 @@
+{
+  "id": "organisation",
+  "name": {
+    "en-GB": "Organisation"
+  },
+  "description": {},
+  "entryTitleField": "name",
+  "fields": [
+    {
+      "id": "name",
+      "name": {
+        "en-GB": "Name"
+      },
+      "dataType": "string",
+      "dataFormat": "",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": null
+    },
+    {
+      "id": "logo",
+      "name": {
+        "en-GB": "Logo"
+      },
+      "dataType": "object",
+      "dataFormat": "image",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": {
+        "id": "image",
+        "instructions": {},
+        "properties": {
+          "displayCaption": false,
+          "placeholderText": null,
+          "trueText": null,
+          "falseText": null,
+          "fromPlaceholderText": null,
+          "toPlaceholderText": null,
+          "quotePlaceholderText": null,
+          "sourcePlaceholderText": null,
+          "displayAltText": false,
+          "uploadPath": "/image-library/Organisation-images"
+        }
+      }
+    },
+    {
+      "id": "address",
+      "name": {
+        "en-GB": "Address"
+      },
+      "dataType": "object",
+      "dataFormat": "component.address",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": null,
+      "fields": [
+        {
+          "id": "buildingNumberOrName",
+          "name": {
+            "en-GB": "Building number or name"
+          },
+          "dataType": "string",
+          "dataFormat": "",
+          "description": {
+            "en-GB": null
+          },
+          "default": null,
+          "validations": {},
+          "editor": null
+        },
+        {
+          "id": "streetName",
+          "name": {
+            "en-GB": "Street name"
+          },
+          "dataType": "string",
+          "dataFormat": "",
+          "description": {
+            "en-GB": null
+          },
+          "default": null,
+          "validations": {},
+          "editor": null
+        },
+        {
+          "id": "towncity",
+          "name": {
+            "en-GB": "Town/city"
+          },
+          "dataType": "string",
+          "dataFormat": "",
+          "description": {
+            "en-GB": null
+          },
+          "default": null,
+          "validations": {},
+          "editor": null
+        },
+        {
+          "id": "postCode",
+          "name": {
+            "en-GB": "Post code"
+          },
+          "dataType": "string",
+          "dataFormat": "",
+          "description": {
+            "en-GB": null
+          },
+          "default": null,
+          "validations": {},
+          "editor": null
+        },
+        {
+          "id": "country",
+          "name": {
+            "en-GB": "Country"
+          },
+          "dataType": "string",
+          "dataFormat": "",
+          "description": {
+            "en-GB": null
+          },
+          "default": null,
+          "validations": {},
+          "editor": null
+        }
+      ]
+    },
+    {
+      "id": "telephone",
+      "name": {
+        "en-GB": "Telephone"
+      },
+      "dataType": "integer",
+      "dataFormat": "",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": null
+    },
+    {
+      "id": "email",
+      "name": {
+        "en-GB": "Email"
+      },
+      "dataType": "string",
+      "dataFormat": "",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {
+        "regex": {
+          "pattern": "/^(([^<>()\\[\\]\\.,;:\\s@\\\"]+(\\.[^<>()\\[\\]\\.,;:\\s@\\\"]+)*)|(\\\".+\\\"))@(([^<>()[\\]\\.,;:\\s@\\\"]+\\.)+[^<>()[\\]\\.,;:\\s@\\\"]{2,})$/i",
+          "message": null
+        }
+      },
+      "editor": null
+    },
+    {
+      "id": "website",
+      "name": {
+        "en-GB": "Website"
+      },
+      "dataType": "string",
+      "dataFormat": "",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {
+        "regex": {
+          "pattern": "/https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,4}\\b([-a-zA-Z0-9@:%_\\+.~#?&\\/\\/=]*)/g",
+          "message": null
+        }
+      },
+      "editor": null
+    },
+    {
+      "id": "socialAccounts",
+      "name": {
+        "en-GB": "Social accounts"
+      },
+      "dataType": "objectArray",
+      "dataFormat": "component.socialaccounts",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": null,
+      "fields": [
+        {
+          "id": "socialAccountName",
+          "name": {
+            "en-GB": "Social Account Name"
+          },
+          "dataType": "string",
+          "dataFormat": "",
+          "description": {
+            "en-GB": null
+          },
+          "default": null,
+          "validations": {},
+          "editor": null
+        },
+        {
+          "id": "accountLink",
+          "name": {
+            "en-GB": "Account Link"
+          },
+          "dataType": "string",
+          "dataFormat": "",
+          "description": {
+            "en-GB": null
+          },
+          "default": null,
+          "validations": {
+            "regex": {
+              "pattern": "/https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,4}\\b([-a-zA-Z0-9@:%_\\+.~#?&\\/\\/=]*)/g",
+              "message": null
+            }
+          },
+          "editor": null
+        }
+      ]
+    },
+    {
+      "id": "keyContact",
+      "name": {
+        "en-GB": "Key contact"
+      },
+      "dataType": "object",
+      "dataFormat": "entry",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {
+        "allowedContentTypes": {
+          "contentTypes": [
+            "person"
+          ],
+          "message": null
+        }
+      },
+      "editor": null
+    }
+  ],
+  "enabled": true,
+  "defaultLanguage": "en-GB",
+  "supportedLanguages": [
+    "en-GB"
+  ],
+  "workflowId": "contensisEntryBasic",
+  "dataFormat": "entry",
+  "groups": []
+}

@@ -1,0 +1,64 @@
+{
+  "id": "eventAdmission",
+  "name": {
+    "en-GB": "Admission"
+  },
+  "description": {},
+  "fields": [
+    {
+      "id": "list",
+      "name": {
+        "en-GB": "List"
+      },
+      "dataType": "stringArray",
+      "dataFormat": null,
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {
+        "allowedValues": {
+          "values": [
+            {
+              "en-GB": "Adult"
+            },
+            {
+              "en-GB": "Child"
+            },
+            {
+              "en-GB": "Concession"
+            },
+            {
+              "en-GB": "Family (2 Adults and 2 Children"
+            },
+            {
+              "en-GB": "Free"
+            }
+          ],
+          "message": null
+        }
+      },
+      "editor": {
+        "id": "list",
+        "instructions": {},
+        "properties": null
+      }
+    },
+    {
+      "id": "price",
+      "name": {
+        "en-GB": "Price"
+      },
+      "dataType": "decimal",
+      "dataFormat": "",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": null
+    }
+  ],
+  "dataFormat": "component",
+  "previewUrl": ""
+}

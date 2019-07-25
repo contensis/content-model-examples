@@ -1,19 +1,16 @@
 {
-    "id": "news",
+    "id": "person",
     "name": {
-        "en-GB": "News"
+        "en-GB": "Person"
     },
     "description": null,
     "contentTypes": [
-        "category",
-        "news",
+        "organisation",
         "person"
     ],
     "components": [
-        "links",
         "metainfo",
-        "socialAccounts",
-        "source"
+        "socialAccounts"
     ],
     "dataFormat": "model"
 }

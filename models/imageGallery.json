@@ -1,19 +1,16 @@
 {
-    "id": "news",
+    "id": "imageGallery",
     "name": {
-        "en-GB": "News"
+        "en-GB": "Image Gallery"
     },
     "description": null,
     "contentTypes": [
         "category",
-        "news",
-        "person"
+        "imageGallery"
     ],
     "components": [
-        "links",
         "metainfo",
-        "socialAccounts",
-        "source"
+        "galleryImage"
     ],
     "dataFormat": "model"
 }

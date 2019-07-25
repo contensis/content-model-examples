@@ -1,176 +1,306 @@
 {
-	"id": "imageGallery",
-	"name": {
-		"en-GB": "Image gallery"
-	},
-	"description": {
-		"en-GB": ""
-	},
-	"entryTitleField": "title",
-	"fields": [
-		{
-			"id": "title",
-			"name": {
-				"en-GB": "Title"
-			},
-			"dataType": "string",
-			"dataFormat": "",
-			"description": {
-				"en-GB": null
-			},
-			"default": null,
-			"validations": {}
-		},
-		{
-			"id": "summary",
-			"name": {
-				"en-GB": "Summary"
-			},
-			"dataType": "string",
-			"dataFormat": "html",
-			"description": {
-				"en-GB": null
-			},
-			"default": null,
-			"validations": {}
-		},
-		{
-			"id": "coverImage",
-			"name": {
-				"en-GB": "Cover image"
-			},
-			"dataType": "object",
-			"dataFormat": "image",
-			"description": {
-				"en-GB": null
-			},
-			"default": null,
-			"validations": {},
-			"editor": {
-				"id": null,
-				"instructions": {},
-				"properties": {
-					"displayCaption": false
-				}
-			}
-		},
-		{
-			"id": "categorys",
-			"name": {
-				"en-GB": "Category/s"
-			},
-			"dataType": "objectArray",
-			"dataFormat": "entry",
-			"description": {
-				"en-GB": null
-			},
-			"default": null,
-			"validations": {
-				"allowedContentTypes": {
-					"contentTypes": [
-						"category"
-					],
-					"message": null
-				}
-			}
-		},
-		{
-			"id": "galleryImage",
-			"name": {
-				"en-GB": "Gallery image"
-			},
-			"dataType": "objectArray",
-			"dataFormat": "component.galleryimage",
-			"description": {
-				"en-GB": null
-			},
-			"default": null,
-			"fields": [
-				{
-					"id": "image",
-					"name": {
-						"en-GB": "Image"
-					},
-					"dataType": "object",
-					"dataFormat": "image",
-					"description": {
-						"en-GB": null
-					},
-					"default": null,
-					"validations": {
-						"altTextRequired": {
-							"message": {
-								"en-GB": ""
-							}
-						}
-					},
-					"editor": {
-						"id": "image",
-						"instructions": {
-							"en-GB": ""
-						},
-						"properties": {
-							"displayCaption": true,
-							"displayAltText": true,
-							"uploadPath": "/image-library",
-							"filterPaths": [
-								"/image-library"
-							]
-						}
-					}
-				},
-				{
-					"id": "title",
-					"name": {
-						"en-GB": "Title"
-					},
-					"dataType": "string",
-					"dataFormat": "",
-					"description": {
-						"en-GB": null
-					},
-					"default": null,
-					"validations": {},
-					"editor": null
-				},
-				{
-					"id": "credit",
-					"name": {
-						"en-GB": "Credit"
-					},
-					"dataType": "string",
-					"dataFormat": "html",
-					"description": {
-						"en-GB": null
-					},
-					"default": null,
-					"validations": {},
-					"editor": null
-				},
-				{
-					"id": "date",
-					"name": {
-						"en-GB": "Date"
-					},
-					"dataType": "dateTime",
-					"dataFormat": "",
-					"description": {
-						"en-GB": null
-					},
-					"default": null,
-					"validations": {},
-					"editor": null
-				}
-			],
-			"validations": {}
-		}
-	],
-	"enabled": true,
-	"defaultLanguage": "en-GB",
-	"supportedLanguages": [
-		"en-GB"
-	],
-	"workflowId": "contensisEntryBasic",
-	"dataFormat": "entry",
-	"previewUrl": ""
+  "id": "imageGallery",
+  "name": {
+    "en-GB": "Image gallery"
+  },
+  "description": {},
+  "entryTitleField": "title",
+  "fields": [
+    {
+      "id": "title",
+      "name": {
+        "en-GB": "Title"
+      },
+      "dataType": "string",
+      "dataFormat": "",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": null
+    },
+    {
+      "id": "summary",
+      "name": {
+        "en-GB": "Summary"
+      },
+      "dataType": "string",
+      "dataFormat": "html",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": null
+    },
+    {
+      "id": "coverImage",
+      "name": {
+        "en-GB": "Cover image"
+      },
+      "dataType": "object",
+      "dataFormat": "image",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": {
+        "id": null,
+        "instructions": {},
+        "properties": {
+          "displayCaption": false,
+          "placeholderText": null,
+          "trueText": null,
+          "falseText": null,
+          "fromPlaceholderText": null,
+          "toPlaceholderText": null,
+          "quotePlaceholderText": null,
+          "sourcePlaceholderText": null
+        }
+      }
+    },
+    {
+      "id": "categorys",
+      "name": {
+        "en-GB": "Category/s"
+      },
+      "dataType": "objectArray",
+      "dataFormat": "entry",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {
+        "allowedContentTypes": {
+          "contentTypes": [
+            "category"
+          ],
+          "message": null
+        }
+      },
+      "editor": null
+    },
+    {
+      "id": "galleryImage",
+      "name": {
+        "en-GB": "Gallery image"
+      },
+      "dataType": "objectArray",
+      "dataFormat": "component.galleryimage",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": null,
+      "fields": [
+        {
+          "id": "image",
+          "name": {
+            "en-GB": "Image"
+          },
+          "dataType": "object",
+          "dataFormat": "image",
+          "description": {
+            "en-GB": null
+          },
+          "default": null,
+          "validations": {
+            "altTextRequired": {
+              "message": {
+                "en-GB": ""
+              }
+            }
+          },
+          "editor": {
+            "id": "image",
+            "instructions": {
+              "en-GB": ""
+            },
+            "properties": {
+              "displayCaption": true,
+              "displayAltText": true,
+              "uploadPath": "/image-library",
+              "filterPaths": [
+                "/image-library"
+              ]
+            }
+          }
+        },
+        {
+          "id": "title",
+          "name": {
+            "en-GB": "Title"
+          },
+          "dataType": "string",
+          "dataFormat": "",
+          "description": {
+            "en-GB": null
+          },
+          "default": null,
+          "validations": {},
+          "editor": null
+        },
+        {
+          "id": "credit",
+          "name": {
+            "en-GB": "Credit"
+          },
+          "dataType": "string",
+          "dataFormat": "html",
+          "description": {
+            "en-GB": null
+          },
+          "default": null,
+          "validations": {},
+          "editor": null
+        },
+        {
+          "id": "date",
+          "name": {
+            "en-GB": "Date"
+          },
+          "dataType": "dateTime",
+          "dataFormat": "",
+          "description": {
+            "en-GB": null
+          },
+          "default": null,
+          "validations": {},
+          "editor": null
+        }
+      ]
+    },
+    {
+      "id": "metaInfo",
+      "name": {
+        "en-GB": "Meta information"
+      },
+      "dataType": "object",
+      "dataFormat": "component.metainfo",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": null,
+      "fields": [
+        {
+          "id": "metaTitle",
+          "name": {
+            "en-GB": "Meta title"
+          },
+          "dataType": "string",
+          "dataFormat": "",
+          "description": {
+            "en-GB": null
+          },
+          "default": null,
+          "validations": {
+            "required": {
+              "message": {
+                "en-GB": "You must enter a meta title."
+              }
+            },
+            "maxLength": {
+              "value": 60,
+              "message": {
+                "en-GB": "Your meta title can't contain more than 60 characters."
+              }
+            }
+          },
+          "editor": {
+            "id": "text",
+            "instructions": {
+              "en-GB": "This is the short title that will appear on search engine results pages and social media."
+            },
+            "properties": null
+          }
+        },
+        {
+          "id": "metaDescription",
+          "name": {
+            "en-GB": "Meta description"
+          },
+          "dataType": "string",
+          "dataFormat": "",
+          "description": {
+            "en-GB": null
+          },
+          "default": null,
+          "validations": {
+            "required": {
+              "message": {
+                "en-GB": "You must enter a meta description. "
+              }
+            },
+            "maxLength": {
+              "value": 140,
+              "message": {
+                "en-GB": "Your meta description can't contain more than 140 characters."
+              }
+            }
+          },
+          "editor": {
+            "id": "text",
+            "instructions": {
+              "en-GB": "This is the short description that will appear on search engine results pages and social media."
+            },
+            "properties": null
+          }
+        },
+        {
+          "id": "metaImage",
+          "name": {
+            "en-GB": "Meta image"
+          },
+          "dataType": "object",
+          "dataFormat": "image",
+          "description": {
+            "en-GB": null
+          },
+          "default": null,
+          "validations": {
+            "altTextRequired": {
+              "message": {
+                "en-GB": "You must add alt text to your image. "
+              }
+            }
+          },
+          "editor": {
+            "id": "image",
+            "instructions": {
+              "en-GB": "This is the image that will appear on search engine results pages and social media."
+            },
+            "properties": {
+              "displayCaption": false,
+              "placeholderText": null,
+              "trueText": null,
+              "falseText": null,
+              "fromPlaceholderText": null,
+              "toPlaceholderText": null,
+              "quotePlaceholderText": null,
+              "sourcePlaceholderText": null,
+              "displayAltText": true,
+              "uploadPath": "/image-library",
+              "filterPaths": [
+                "/image-library"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "enabled": true,
+  "defaultLanguage": "en-GB",
+  "supportedLanguages": [
+    "en-GB"
+  ],
+  "workflowId": "contensisEntryBasic",
+  "dataFormat": "entry",
+  "previewUrl": "",
+  "groups": []
 }

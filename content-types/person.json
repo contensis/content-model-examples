@@ -1,135 +1,285 @@
 {
-	"id": "person",
-	"name": {
-		"en-GB": "Person"
-	},
-	"description": {
-		"en-GB": ""
-	},
-	"entryTitleField": "fullName",
-	"fields": [
-		{
-			"id": "fullName",
-			"name": {
-				"en-GB": "Full name"
-			},
-			"dataType": "string",
-			"dataFormat": "",
-			"description": {
-				"en-GB": null
-			},
-			"default": null,
-			"validations": {}
-		},
-		{
-			"id": "jobTitle",
-			"name": {
-				"en-GB": "Job title"
-			},
-			"dataType": "string",
-			"dataFormat": "",
-			"description": {
-				"en-GB": null
-			},
-			"default": null,
-			"validations": {}
-		},
-		{
-			"id": "bio",
-			"name": {
-				"en-GB": "Biography"
-			},
-			"dataType": "string",
-			"dataFormat": "html",
-			"description": {
-				"en-GB": null
-			},
-			"default": null,
-			"validations": {}
-		},
-		{
-			"id": "socialAccounts",
-			"name": {
-				"en-GB": "Social accounts"
-			},
-			"dataType": "object",
-			"dataFormat": "component.socialaccounts",
-			"description": {
-				"en-GB": null
-			},
-			"default": {
-				"en-GB": ""
-			},
-			"fields": [
-				{
-					"id": "socialAccountName",
-					"name": {
-						"en-GB": "Social Account Name"
-					},
-					"dataType": "string",
-					"dataFormat": "",
-					"description": {
-						"en-GB": null
-					},
-					"default": null,
-					"validations": {},
-					"editor": null
-				},
-				{
-					"id": "accountLink",
-					"name": {
-						"en-GB": "Account Link"
-					},
-					"dataType": "string",
-					"dataFormat": "",
-					"description": {
-						"en-GB": null
-					},
-					"default": null,
-					"validations": {
-						"regex": {
-							"pattern": "/https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,4}\\b([-a-zA-Z0-9@:%_\\+.~#?&\\/\\/=]*)/g",
-							"message": null
-						}
-					},
-					"editor": null
-				}
-			],
-			"validations": {}
-		},
-		{
-			"id": "image",
-			"name": {
-				"en-GB": "Image"
-			},
-			"dataType": "object",
-			"dataFormat": "image",
-			"description": {
-				"en-GB": null
-			},
-			"default": null,
-			"validations": {},
-			"editor": {
-				"id": null,
-				"instructions": {},
-				"properties": {
-					"displayCaption": false,
-					"placeholderText": null,
-					"trueText": null,
-					"falseText": null,
-					"fromPlaceholderText": null,
-					"toPlaceholderText": null,
-					"quotePlaceholderText": null,
-					"sourcePlaceholderText": null
-				}
-			}
-		}
-	],
-	"enabled": true,
-	"defaultLanguage": "en-GB",
-	"supportedLanguages": [
-		"en-GB"
-	],
-	"workflowId": "contensisEntryBasic",
-	"dataFormat": "entry"
+  "id": "person",
+  "name": {
+    "en-GB": "Person"
+  },
+  "description": {},
+  "entryTitleField": "fullName",
+  "fields": [
+    {
+      "id": "fullName",
+      "name": {
+        "en-GB": "Full name"
+      },
+      "dataType": "string",
+      "dataFormat": "",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": null
+    },
+    {
+      "id": "jobTitle",
+      "name": {
+        "en-GB": "Job title"
+      },
+      "dataType": "string",
+      "dataFormat": "",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": null
+    },
+    {
+      "id": "bio",
+      "name": {
+        "en-GB": "Biography"
+      },
+      "dataType": "string",
+      "dataFormat": "html",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": null
+    },
+    {
+      "id": "socialAccounts",
+      "name": {
+        "en-GB": "Social accounts"
+      },
+      "dataType": "objectArray",
+      "dataFormat": "component.socialaccounts",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": null,
+      "fields": [
+        {
+          "id": "socialAccountName",
+          "name": {
+            "en-GB": "Social Account Name"
+          },
+          "dataType": "string",
+          "dataFormat": "",
+          "description": {
+            "en-GB": null
+          },
+          "default": null,
+          "validations": {},
+          "editor": null
+        },
+        {
+          "id": "accountLink",
+          "name": {
+            "en-GB": "Account Link"
+          },
+          "dataType": "string",
+          "dataFormat": "",
+          "description": {
+            "en-GB": null
+          },
+          "default": null,
+          "validations": {
+            "regex": {
+              "pattern": "/https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,4}\\b([-a-zA-Z0-9@:%_\\+.~#?&\\/\\/=]*)/g",
+              "message": null
+            }
+          },
+          "editor": null
+        }
+      ]
+    },
+    {
+      "id": "profilePhoto",
+      "name": {
+        "en-GB": "Profile photo"
+      },
+      "dataType": "object",
+      "dataFormat": "image",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {
+        "altTextRequired": {
+          "message": {
+            "en-GB": ""
+          }
+        }
+      },
+      "editor": {
+        "id": "image",
+        "instructions": {},
+        "properties": {
+          "displayCaption": true,
+          "placeholderText": null,
+          "trueText": null,
+          "falseText": null,
+          "fromPlaceholderText": null,
+          "toPlaceholderText": null,
+          "quotePlaceholderText": null,
+          "sourcePlaceholderText": null,
+          "displayAltText": true,
+          "uploadPath": "/image-library/profile-images"
+        }
+      }
+    },
+    {
+      "id": "organisation",
+      "name": {
+        "en-GB": "Organisation"
+      },
+      "dataType": "object",
+      "dataFormat": "entry",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {
+        "allowedContentTypes": {
+          "contentTypes": [
+            "organisation"
+          ],
+          "message": null
+        }
+      },
+      "editor": null
+    },
+    {
+      "id": "metaInfo",
+      "name": {
+        "en-GB": "Meta information"
+      },
+      "dataType": "object",
+      "dataFormat": "component.metainfo",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": null,
+      "fields": [
+        {
+          "id": "metaTitle",
+          "name": {
+            "en-GB": "Meta title"
+          },
+          "dataType": "string",
+          "dataFormat": "",
+          "description": {
+            "en-GB": null
+          },
+          "default": null,
+          "validations": {
+            "required": {
+              "message": {
+                "en-GB": "You must enter a meta title."
+              }
+            },
+            "maxLength": {
+              "value": 60,
+              "message": {
+                "en-GB": "Your meta title can't contain more than 60 characters."
+              }
+            }
+          },
+          "editor": {
+            "id": "text",
+            "instructions": {
+              "en-GB": "This is the short title that will appear on search engine results pages and social media."
+            },
+            "properties": null
+          }
+        },
+        {
+          "id": "metaDescription",
+          "name": {
+            "en-GB": "Meta description"
+          },
+          "dataType": "string",
+          "dataFormat": "",
+          "description": {
+            "en-GB": null
+          },
+          "default": null,
+          "validations": {
+            "required": {
+              "message": {
+                "en-GB": "You must enter a meta description. "
+              }
+            },
+            "maxLength": {
+              "value": 140,
+              "message": {
+                "en-GB": "Your meta description can't contain more than 140 characters."
+              }
+            }
+          },
+          "editor": {
+            "id": "text",
+            "instructions": {
+              "en-GB": "This is the short description that will appear on search engine results pages and social media."
+            },
+            "properties": null
+          }
+        },
+        {
+          "id": "metaImage",
+          "name": {
+            "en-GB": "Meta image"
+          },
+          "dataType": "object",
+          "dataFormat": "image",
+          "description": {
+            "en-GB": null
+          },
+          "default": null,
+          "validations": {
+            "altTextRequired": {
+              "message": {
+                "en-GB": "You must add alt text to your image. "
+              }
+            }
+          },
+          "editor": {
+            "id": "image",
+            "instructions": {
+              "en-GB": "This is the image that will appear on search engine results pages and social media."
+            },
+            "properties": {
+              "displayCaption": false,
+              "placeholderText": null,
+              "trueText": null,
+              "falseText": null,
+              "fromPlaceholderText": null,
+              "toPlaceholderText": null,
+              "quotePlaceholderText": null,
+              "sourcePlaceholderText": null,
+              "displayAltText": true,
+              "uploadPath": "/image-library",
+              "filterPaths": [
+                "/image-library"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "enabled": true,
+  "defaultLanguage": "en-GB",
+  "supportedLanguages": [
+    "en-GB"
+  ],
+  "workflowId": "contensisEntryBasic",
+  "dataFormat": "entry",
+  "groups": []
 }

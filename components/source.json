@@ -1,90 +1,148 @@
 {
-	"id": "source",
-	"name": {
-		"en-GB": "Source"
-	},
-	"description": {
-		"en-GB": ""
-	},
-	"fields": [
-		{
-			"id": "nameOfSource",
-			"name": {
-				"en-GB": "Name of source"
-			},
-			"dataType": "string",
-			"dataFormat": "",
-			"description": {
-				"en-GB": null
-			},
-			"default": null,
-			"validations": {}
-		},
-		{
-			"id": "title",
-			"name": {
-				"en-GB": "Title"
-			},
-			"dataType": "string",
-			"dataFormat": "",
-			"description": {
-				"en-GB": null
-			},
-			"default": null,
-			"validations": {}
-		},
-		{
-			"id": "publisher",
-			"name": {
-				"en-GB": "Publisher"
-			},
-			"dataType": "string",
-			"dataFormat": "",
-			"description": {
-				"en-GB": null
-			},
-			"default": null,
-			"validations": {}
-		},
-		{
-			"id": "datePublished",
-			"name": {
-				"en-GB": "Date published"
-			},
-			"dataType": "dateTime",
-			"dataFormat": "",
-			"description": {
-				"en-GB": null
-			},
-			"default": null,
-			"validations": {}
-		},
-		{
-			"id": "linkToSource",
-			"name": {
-				"en-GB": "Link to source"
-			},
-			"dataType": "string",
-			"dataFormat": "html",
-			"description": {
-				"en-GB": null
-			},
-			"default": null,
-			"validations": {}
-		},
-		{
-			"id": "dateRetrieved",
-			"name": {
-				"en-GB": "Date retrieved"
-			},
-			"dataType": "dateTime",
-			"dataFormat": "",
-			"description": {
-				"en-GB": null
-			},
-			"default": null,
-			"validations": {}
-		}
-	],
-	"dataFormat": "component"
+  "id": "source",
+  "name": {
+    "en-GB": "Source"
+  },
+  "description": {},
+  "fields": [
+    {
+      "id": "nameOfSource",
+      "name": {
+        "en-GB": "Name of source"
+      },
+      "dataType": "string",
+      "dataFormat": "",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": null
+    },
+    {
+      "id": "title",
+      "name": {
+        "en-GB": "Title"
+      },
+      "dataType": "string",
+      "dataFormat": "",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {
+        "required": {
+          "message": {
+            "en-GB": "You must add the title of the source? "
+          }
+        }
+      },
+      "editor": {
+        "id": "text",
+        "instructions": {
+          "en-GB": "What's the title of the source?"
+        },
+        "properties": null
+      }
+    },
+    {
+      "id": "publisher",
+      "name": {
+        "en-GB": "Publisher"
+      },
+      "dataType": "string",
+      "dataFormat": "",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {
+        "required": {
+          "message": {
+            "en-GB": "You must add the publisher of the source. "
+          }
+        }
+      },
+      "editor": {
+        "id": "text",
+        "instructions": {
+          "en-GB": "Who published the source? This could be a book publisher, a newspaper, or a website. "
+        },
+        "properties": null
+      }
+    },
+    {
+      "id": "datePublished",
+      "name": {
+        "en-GB": "Date published"
+      },
+      "dataType": "dateTime",
+      "dataFormat": "",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {
+        "required": {
+          "message": {
+            "en-GB": "You must add the date the source was published. "
+          }
+        }
+      },
+      "editor": {
+        "id": "date",
+        "instructions": {
+          "en-GB": "When was the source published or released? "
+        },
+        "properties": null
+      }
+    },
+    {
+      "id": "linkToSource",
+      "name": {
+        "en-GB": "Link to source"
+      },
+      "dataType": "string",
+      "dataFormat": "html",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": {
+        "id": null,
+        "instructions": {
+          "en-GB": "If the source is an online resource, like a web page, add a link here. If it's a physical resource, like a book or film, leave this field empty."
+        },
+        "properties": null
+      }
+    },
+    {
+      "id": "dateRetrieved",
+      "name": {
+        "en-GB": "Date retrieved"
+      },
+      "dataType": "dateTime",
+      "dataFormat": "",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {
+        "required": {
+          "message": {
+            "en-GB": "You must add the date you retrieved the source. "
+          }
+        }
+      },
+      "editor": {
+        "id": "date",
+        "instructions": {
+          "en-GB": "When did you last check the source? "
+        },
+        "properties": null
+      }
+    }
+  ],
+  "dataFormat": "component"
 }

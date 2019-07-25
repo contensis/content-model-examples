@@ -1,43 +1,45 @@
 {
-	"id": "socialAccounts",
-	"name": {
-		"en-GB": "Social accounts"
-	},
-	"description": {
-		"en-GB": ""
-	},
-	"fields": [
-		{
-			"id": "socialAccountName",
-			"name": {
-				"en-GB": "Social Account Name"
-			},
-			"dataType": "string",
-			"dataFormat": "",
-			"description": {
-				"en-GB": null
-			},
-			"default": null,
-			"validations": {}
-		},
-		{
-			"id": "accountLink",
-			"name": {
-				"en-GB": "Account Link"
-			},
-			"dataType": "string",
-			"dataFormat": "",
-			"description": {
-				"en-GB": null
-			},
-			"default": null,
-			"validations": {
-				"regex": {
-					"pattern": "/https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,4}\\b([-a-zA-Z0-9@:%_\\+.~#?&\\/\\/=]*)/g",
-					"message": null
-				}
-			}
-		}
-	],
-	"dataFormat": "component"
+  "id": "socialAccounts",
+  "name": {
+    "en-GB": "Social accounts"
+  },
+  "description": {
+    "en-GB": ""
+  },
+  "fields": [
+    {
+      "id": "socialAccountName",
+      "name": {
+        "en-GB": "Social Account Name"
+      },
+      "dataType": "string",
+      "dataFormat": "",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {},
+      "editor": null
+    },
+    {
+      "id": "accountLink",
+      "name": {
+        "en-GB": "Account Link"
+      },
+      "dataType": "string",
+      "dataFormat": "",
+      "description": {
+        "en-GB": null
+      },
+      "default": null,
+      "validations": {
+        "regex": {
+          "pattern": "/https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,4}\\b([-a-zA-Z0-9@:%_\\+.~#?&\\/\\/=]*)/g",
+          "message": null
+        }
+      },
+      "editor": null
+    }
+  ],
+  "dataFormat": "component"
 }

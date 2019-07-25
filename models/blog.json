@@ -13,8 +13,9 @@
     ],
     "components": [
         "codeExample",
+        "galleryImage",
         "links",
-        "metadata",
+        "metainfo",
         "socialAccounts"
     ],
     "dataFormat": "model"
