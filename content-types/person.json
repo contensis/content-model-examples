@@ -1,0 +1,135 @@
+{
+	"id": "person",
+	"name": {
+		"en-GB": "Person"
+	},
+	"description": {
+		"en-GB": ""
+	},
+	"entryTitleField": "fullName",
+	"fields": [
+		{
+			"id": "fullName",
+			"name": {
+				"en-GB": "Full name"
+			},
+			"dataType": "string",
+			"dataFormat": "",
+			"description": {
+				"en-GB": null
+			},
+			"default": null,
+			"validations": {}
+		},
+		{
+			"id": "jobTitle",
+			"name": {
+				"en-GB": "Job title"
+			},
+			"dataType": "string",
+			"dataFormat": "",
+			"description": {
+				"en-GB": null
+			},
+			"default": null,
+			"validations": {}
+		},
+		{
+			"id": "bio",
+			"name": {
+				"en-GB": "Biography"
+			},
+			"dataType": "string",
+			"dataFormat": "html",
+			"description": {
+				"en-GB": null
+			},
+			"default": null,
+			"validations": {}
+		},
+		{
+			"id": "socialAccounts",
+			"name": {
+				"en-GB": "Social accounts"
+			},
+			"dataType": "object",
+			"dataFormat": "component.socialaccounts",
+			"description": {
+				"en-GB": null
+			},
+			"default": {
+				"en-GB": ""
+			},
+			"fields": [
+				{
+					"id": "socialAccountName",
+					"name": {
+						"en-GB": "Social Account Name"
+					},
+					"dataType": "string",
+					"dataFormat": "",
+					"description": {
+						"en-GB": null
+					},
+					"default": null,
+					"validations": {},
+					"editor": null
+				},
+				{
+					"id": "accountLink",
+					"name": {
+						"en-GB": "Account Link"
+					},
+					"dataType": "string",
+					"dataFormat": "",
+					"description": {
+						"en-GB": null
+					},
+					"default": null,
+					"validations": {
+						"regex": {
+							"pattern": "/https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,4}\\b([-a-zA-Z0-9@:%_\\+.~#?&\\/\\/=]*)/g",
+							"message": null
+						}
+					},
+					"editor": null
+				}
+			],
+			"validations": {}
+		},
+		{
+			"id": "image",
+			"name": {
+				"en-GB": "Image"
+			},
+			"dataType": "object",
+			"dataFormat": "image",
+			"description": {
+				"en-GB": null
+			},
+			"default": null,
+			"validations": {},
+			"editor": {
+				"id": null,
+				"instructions": {},
+				"properties": {
+					"displayCaption": false,
+					"placeholderText": null,
+					"trueText": null,
+					"falseText": null,
+					"fromPlaceholderText": null,
+					"toPlaceholderText": null,
+					"quotePlaceholderText": null,
+					"sourcePlaceholderText": null
+				}
+			}
+		}
+	],
+	"enabled": true,
+	"defaultLanguage": "en-GB",
+	"supportedLanguages": [
+		"en-GB"
+	],
+	"workflowId": "contensisEntryBasic",
+	"dataFormat": "entry"
+}

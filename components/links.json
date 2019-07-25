@@ -1,0 +1,43 @@
+{
+	"id": "links",
+	"name": {
+		"en-GB": "Links"
+	},
+	"description": {
+		"en-GB": ""
+	},
+	"fields": [
+		{
+			"id": "label",
+			"name": {
+				"en-GB": "Label"
+			},
+			"dataType": "string",
+			"dataFormat": "",
+			"description": {
+				"en-GB": null
+			},
+			"default": null,
+			"validations": {}
+		},
+		{
+			"id": "url",
+			"name": {
+				"en-GB": "URL"
+			},
+			"dataType": "string",
+			"dataFormat": "",
+			"description": {
+				"en-GB": null
+			},
+			"default": null,
+			"validations": {
+				"regex": {
+					"pattern": "/https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,4}\\b([-a-zA-Z0-9@:%_\\+.~#?&\\/\\/=]*)/g",
+					"message": null
+				}
+			}
+		}
+	],
+	"dataFormat": "component"
+}

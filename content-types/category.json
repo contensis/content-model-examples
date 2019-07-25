@@ -1,0 +1,32 @@
+{
+	"id": "category",
+	"name": {
+		"en-GB": "Category"
+	},
+	"description": {
+		"en-GB": ""
+	},
+	"entryTitleField": "title",
+	"fields": [
+		{
+			"id": "title",
+			"name": {
+				"en-GB": "Title"
+			},
+			"dataType": "string",
+			"dataFormat": "",
+			"description": {
+				"en-GB": null
+			},
+			"default": null,
+			"validations": {}
+		}
+	],
+	"enabled": true,
+	"defaultLanguage": "en-GB",
+	"supportedLanguages": [
+		"en-GB"
+	],
+	"workflowId": "contensisEntryBasic",
+	"dataFormat": "entry"
+}

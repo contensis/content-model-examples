@@ -5,12 +5,15 @@
     },
     "description": null,
     "contentTypes": [
+        "category",
         "news",
-        "person",
-        "categories"
+        "person"
     ],
     "components": [
-        "location"
+        "links",
+        "metadata",
+        "socialAccounts",
+        "source"
     ],
     "dataFormat": "model"
 }
