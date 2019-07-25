@@ -1,0 +1,16 @@
+{
+    "id": "events",
+    "name": {
+        "en-GB": "Events"
+    },
+    "description": null,
+    "contentTypes": [
+        "events",
+        "person",
+        "categories"
+    ],
+    "components": [
+        "location"
+    ],
+    "dataFormat": "model"
+}
