@@ -1,0 +1,16 @@
+{
+    "id": "news",
+    "name": {
+        "en-GB": "News"
+    },
+    "description": null,
+    "contentTypes": [
+        "news",
+        "person",
+        "categories"
+    ],
+    "components": [
+        "location"
+    ],
+    "dataFormat": "model"
+}
