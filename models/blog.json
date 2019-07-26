@@ -8,6 +8,7 @@
         "category",
         "blog",
         "imageGallery",
+        "organisation",
         "person",
         "videoContent"
     ],
@@ -16,7 +17,8 @@
         "galleryImage",
         "links",
         "metaInfo",
-        "socialAccounts"
+        "socialAccounts",
+        "source"
     ],
     "dataFormat": "model"
 }
