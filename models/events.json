@@ -7,11 +7,11 @@
     "contentTypes": [
         "event",
         "person",
-        "categories"
+        "categories",
+        "location"
     ],
     "components": [
-        "embed",
-        "location"
+        "embed"
     ],
     "dataFormat": "model"
 }
