@@ -19,8 +19,7 @@
         "metaInfo",
         "socialAccounts",
         "address",
-        "galleryImage",
-        "address"
+        "galleryImage"
     ],
     "dataFormat": "model"
 }
