@@ -13,6 +13,7 @@
         "videoContent"
     ],
     "components": [
+        "address",
         "embed",
         "galleryImage",
         "links",
