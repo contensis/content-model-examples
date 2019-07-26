@@ -8,10 +8,15 @@
         "event",
         "person",
         "category",
-        "location"
+        "location",
+        "videoContent",
+        "imageGallery",
+        "organisation"
     ],
     "components": [
-        "embed"
+        "embed",
+        "eventAdmission",
+        "metaInfo"
     ],
     "dataFormat": "model"
 }
