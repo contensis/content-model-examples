@@ -11,7 +11,7 @@
     ],
     "components": [
         "links",
-        "metainfo",
+        "metaInfo",
         "socialAccounts",
         "source"
     ],
