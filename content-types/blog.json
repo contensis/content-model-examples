@@ -605,8 +605,7 @@
       "validations": {
         "allowedContentTypes": {
           "contentTypes": [
-            "blog",
-            "news"
+            "blog"
           ],
           "message": null
         }
