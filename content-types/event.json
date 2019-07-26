@@ -603,9 +603,7 @@
       "default": null,
       "validations": {
         "allowedContentTypes": {
-          "contentTypes": [
-            "blog",
-            "news",
+          "contentTypes": [            
             "event"
           ],
           "message": null
