@@ -9,7 +9,7 @@
         "person"
     ],
     "components": [
-        "metainfo",
+        "metaInfo",
         "socialAccounts"
     ],
     "dataFormat": "model"
