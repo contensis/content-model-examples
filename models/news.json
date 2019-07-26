@@ -6,10 +6,13 @@
     "description": null,
     "contentTypes": [
         "category",
+        "imageGallery",
         "news",
-        "person"
+        "person",
+        "videoContent"
     ],
     "components": [
+        "embed",
         "links",
         "metaInfo",
         "socialAccounts",
