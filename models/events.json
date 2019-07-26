@@ -16,7 +16,11 @@
     "components": [
         "embed",
         "eventAdmission",
-        "metaInfo"
+        "metaInfo",
+        "socialAccounts",
+        "address",
+        "galleryImage",
+        "address"
     ],
     "dataFormat": "model"
 }
