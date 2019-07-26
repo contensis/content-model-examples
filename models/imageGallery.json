@@ -9,7 +9,7 @@
         "imageGallery"
     ],
     "components": [
-        "metainfo",
+        "metaInfo",
         "galleryImage"
     ],
     "dataFormat": "model"
