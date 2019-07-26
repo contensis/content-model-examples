@@ -7,7 +7,7 @@
     "contentTypes": [
         "event",
         "person",
-        "categories",
+        "category",
         "location"
     ],
     "components": [
